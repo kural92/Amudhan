@@ -178,6 +178,233 @@ public class Search_POM extends BaseTest{
 	}
 	
 	
+	@FindBy(id="countryTemp")
+	private WebElement Regular_CountryLiving_Value;
+	public WebElement getRegular_CountryLiving_Value() {
+		return Regular_CountryLiving_Value;
+	}
+	
+	@FindBy(id="country")
+	private WebElement Regular_CountryLiving_Choosed;
+	public WebElement getRegular_CountryLiving_Choosed() {
+		return Regular_CountryLiving_Choosed;
+	}
+	
+	@FindBy(id="educationTemp")
+	private WebElement Regular_Education_Value;
+	public WebElement getRegular_Education_Value() {
+		return Regular_Education_Value;
+	}
+	
+	@FindBy(id="education")
+	private WebElement Regular_Education_Choosed;
+	public WebElement getRegular_Education_Choosed() {
+		return Regular_Education_Choosed;
+
+	}
+	
+	@FindBy(id="photoOpt")
+	private WebElement Regular_ShowProfile_Photo;
+	public WebElement getRegular_ShowProfile_Photo() {
+		return Regular_ShowProfile_Photo;
+	}
+	
+	
+	@FindBy(id="horoscopeOpt")
+	private WebElement Regular_ShowProfile_Horoscope;
+	public WebElement getRegular_ShowProfile_Horoscope() {
+		return Regular_ShowProfile_Horoscope;
+	}
+	
+	@FindBy(id="alreadyContOpt")
+	private WebElement Regular_DontShow_Contacted;
+	public WebElement getRegular_DontShow_Contacted() {
+		return Regular_DontShow_Contacted;
+	}
+	
+	@FindBy(id="alreadyViewedOpt")
+	private WebElement Regular_DontShow_Viewed;
+	public WebElement getRegular_DontShow_Viewed() {
+		return Regular_DontShow_Viewed;
+	}
+	
+	@FindBy(id="shortlistOpt")
+	private WebElement Regular_DontShow_ShortListed;
+	public WebElement getRegular_DontShow_ShortListed() {
+		return Regular_DontShow_ShortListed;
+	}
+	
+	@FindBy(id="ignoredOpt")
+	private WebElement Regular_DontShow_Blocked;
+	public WebElement getRegular_DontShow_Blocked() {
+		return Regular_DontShow_Blocked;
+	}
+	
+	@FindBy(id="igOpt")
+	private WebElement Regular_DontShow_Ignored;
+	public WebElement getRegular_DontShow_Ignored() {
+		return Regular_DontShow_Ignored;
+	}
+	
+		
+	@FindBy(xpath="//input[@value='Search']")
+	private WebElement Regular_SEARCH_Btn;
+	public WebElement getRegular_SEARCH_Btn() {
+		return Regular_SEARCH_Btn;
+	}
+	
+	
+	@FindBy(xpath="//input[@value='Save & Search']")
+	private WebElement Regular_SAVE_SEARCH_Btn;
+	public WebElement getRegular_SAVE_SEARCH_Btn() {
+		return Regular_SAVE_SEARCH_Btn;
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////
+	
+	////    Advanced Search  ///////////////////////
+	
+	@FindBy(id="ageFrom")
+	private WebElement Advanced_AgeFrom_DD;
+	public WebElement getAdvanced_AgeFrom_DD() {
+		return Advanced_AgeFrom_DD;
+	}
+
+
+
+	@FindBy(id="ageTo")
+	private WebElement Advanced_AgeTo_DD;
+	public WebElement getAdvanced_AgeTo_DD() {
+		return Advanced_AgeTo_DD;
+	}
+
+
+
+	@FindBy(id="heightFrom")
+	private WebElement Advanced_HeightFrom_DD;
+    public WebElement getAdvanced_HeightFrom_DD() {
+		return Advanced_HeightFrom_DD;
+	}
+
+
+
+	@FindBy(id="heightTo")
+	private WebElement Advanced_HeightTo_DD;
+	public WebElement getAdvanced_HeightTo_DD() {
+		return Advanced_HeightTo_DD;
+	}
+
+
+
+	@FindBy(id="maritalStatus0")
+	private WebElement Advanced_Marital_Any;
+    public WebElement getAdvanced_Marital_Any() {
+		return Advanced_Marital_Any;
+	}
+
+
+
+	@FindBy(id="maritalStatus1")
+	private WebElement Advanced_Marital_Unmarried;	
+	public WebElement getAdvanced_Marital_Unmarried() {
+		return Advanced_Marital_Unmarried;
+	}
+
+
+
+	@FindBy(id="maritalStatus2")
+	private WebElement Advanced_Marital_Widow;
+	public WebElement getAdvanced_Marital_Widow() {
+		return Advanced_Marital_Widow;
+	}
+
+
+
+	@FindBy(id="maritalStatus3")
+	private WebElement Advanced_Marital_Divorceed;
+    public WebElement getAdvanced_Marital_Divorceed() {
+		return Advanced_Marital_Divorceed;
+	}
+
+
+
+	@FindBy(id="maritalStatus4")
+	private WebElement Advanced_Marital_Seperated;	
+	public WebElement getAdvanced_Marital_Seperated() {
+		return Advanced_Marital_Seperated;
+	}
+
+
+
+	@FindBy(id="haveChildren1")
+	private WebElement Advanced_HaveChild_No;	
+	public WebElement getAdvanced_HaveChild_No() {
+		return Advanced_HaveChild_No;
+	}
+
+
+
+	@FindBy(id="haveChildren2")
+	private WebElement Regular_HaveChild_YesLiving;
+	public WebElement getRegular_HaveChild_YesLiving() {
+		return Regular_HaveChild_YesLiving;
+	}
+	
+	@FindBy(id="haveChildren3")
+	private WebElement Regular_HaveChild_Yes_Not_Living;
+	public WebElement getRegular_HaveChild_Yes_Not_Living() {
+		return Regular_HaveChild_Yes_Not_Living;
+	}
+	
+	@FindBy(id="haveChildren")
+	private WebElement Regular_HaveChild__Doesnt;
+	public WebElement getRegular_HaveChild__Doesnt() {
+		return Regular_HaveChild__Doesnt;
+	}
+	
+	
+	@FindBy(id="subcasteTemp")
+	private WebElement Regular_Subcaste_Value;
+	public WebElement getRegular_Subcaste_Value() {
+		return Regular_Subcaste_Value;
+	}
+	
+	
+	@FindBy(id="subcaste")
+	private WebElement Regular_Subcaste_Choosed;
+	public WebElement getRegular_Subcaste_Choosed() {
+		return Regular_Subcaste_Choosed;
+	}
+	
+	@FindBy(id="motherTongueTemp")
+	private WebElement Regular_MOtherTongue_Value;
+	public WebElement getRegular_MOtherTongue_Value() {
+		return Regular_MOtherTongue_Value;
+	}
+	
+	
+	@FindBy(id="motherTongue")
+	private WebElement Regular_MOtherTongue_Choosed;
+	public WebElement getRegular_MOtherTongue_Choosed() {
+		return Regular_MOtherTongue_Choosed;
+	}
+	
+	
+	@FindBy(id="countryTemp")
+	private WebElement Regular_CountryLiving_Value;
+	public WebElement getRegular_CountryLiving_Value() {
+		return Regular_CountryLiving_Value;
+	}
+	
+	@FindBy(id="country")
+	private WebElement Regular_CountryLiving_Choosed;
+	public WebElement getRegular_CountryLiving_Choosed() {
+		return Regular_CountryLiving_Choosed;
+	}
+	
+	@FindBy(id="educationTemp")
+	private WebElement Regular_Education_Value;
+	
 	
 	
 	
