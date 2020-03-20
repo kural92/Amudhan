@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 187.996 sec <<< FAILURE! - in TestSuite
+login(com.TestScripts.LoginTest)  Time elapsed: 12.176 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.LoginTest.login(LoginTest.java:46)
+
+smsTest(com.TestScripts.LoginTest)  Time elapsed: 20.245 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.LoginTest.smsTest(LoginTest.java:264)
+
+payment(com.TestScripts.PayMentTest)  Time elapsed: 20.539 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.PayMentTest.payment(PayMentTest.java:54)
+
+smsTest(com.TestScripts.PayMentTest)  Time elapsed: 24.828 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.PayMentTest.smsTest(PayMentTest.java:314)
+
+divorceeLogin(com.TestScripts.DivorceeLoginTest)  Time elapsed: 26.239 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceeLoginTest.divorceeLogin(DivorceeLoginTest.java:50)
+
+smsTest(com.TestScripts.DivorceeLoginTest)  Time elapsed: 30.548 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceeLoginTest.smsTest(DivorceeLoginTest.java:269)
+
+divorceePayment(com.TestScripts.DivorceePayment)  Time elapsed: 94.22 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceePayment.divorceePayment(DivorceePayment.java:52)
+
+smsTest(com.TestScripts.DivorceePayment)  Time elapsed: 98.608 sec  <<< FAILURE!
+java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceePayment.smsTest(DivorceePayment.java:317)
+

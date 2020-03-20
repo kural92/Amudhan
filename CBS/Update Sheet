@@ -1,0 +1,46 @@
+// CBSLISTING - 1257 RASi BASed on Mother Tongue
+
+View Profile :
+//xpath = (//span[contains(text(),'Mother Tongue')]//following::span[@class='ng-binding'])[1]  -  Mother Tongue
+//xpath = (//span[contains(text(),'Raasi')]//following::span[@class='ng-binding'])[1]    -  Rassi if presents 
+
+
+// Star Search = //select[@name='motherTongue[]']//option   ( List Value - Already Choosen )  Use to clear
+// Mother Tongue choose value = //select[@id='motherTongueTemp']
+
+
+Who Can See Me : 
+   Login -->  Edit PI  --> Take Values -->
+   Age Height  Marital Status Annual Income etc .,
+   
+   Use If else condition to validate the WCSM - 
+   Declare all the Variables Globally.
+   
+    Click on Self View Profile --> Click WCSM-->
+    Validate the Condition values Matches with WCSM..
+    
+    
+    
+    
+    
+    
+    // // /// 
+    Age   -  Completed
+    Height  -  Completed
+    Mother Tongue  -  	Completed
+    Marital Status  -  Completed
+    Religion
+    Caste / Division / Denomination
+    SubCaste  -  Completed
+    Marital Status  -  Completed
+    EAting   
+    Drinking 
+    Smoking
+    Dosham/Manglik
+    Occupation 
+    Annual Income
+    Country       Completed
+    Citizenship   Completed
+    EDucation    Completed
+    Occupation    Completed
+    	

@@ -1,0 +1,7 @@
+base\BaseTest.class
+pom\cmlogin\Inbox.class
+TestScriptss\NegativePaymentt.class
+TestScriptss\Sample.class
+pom\cmlogin\LoginDiv.class
+pom\cmlogin\payDiv.class
+TestScriptss\InboxTest.class

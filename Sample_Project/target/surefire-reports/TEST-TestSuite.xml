@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="187.996" tests="8" errors="0" skipped="0" failures="8">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="JOB_NAME" value="Divorcee"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="NUMBER_OF_PROCESSORS" value="4"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="JENKINS_HOME" value="C:\Program Files (x86)\Jenkins"/>
+    <property name="HUDSON_SERVER_COOKIE" value="50929e6cd1bd21ff"/>
+    <property name="POM_ARTIFACTID" value="Sample_Project"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_162\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_162\jre\classes"/>
+    <property name="EXECUTOR_NUMBER" value="0"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="POM_DISPLAYNAME" value="Sample_Project"/>
+    <property name="NODE_LABELS" value="master"/>
+    <property name="TEMP" value="C:\WINDOWS\TEMP"/>
+    <property name="java.runtime.version" value="1.8.0_162-b12"/>
+    <property name="WINSW_SERVICE_ID" value="Jenkins"/>
+    <property name="user.name" value="DESKTOP-E21Q8AT$"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+    <property name="ProgramFiles" value="C:\Program Files (x86)"/>
+    <property name="user.language" value="en"/>
+    <property name="JOB_BASE_NAME" value="Divorcee"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/Divorcee/1344/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#1344"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_162\jre\bin"/>
+    <property name="LOCALAPPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local"/>
+    <property name="java.version" value="1.8.0_162"/>
+    <property name="PROCESSOR_LEVEL" value="6"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="USERNAME" value="DESKTOP-E21Q8AT$"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="NODE_NAME" value="master"/>
+    <property name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_162\jre\lib\endorsed"/>
+    <property name="BUILD_ID" value="1344"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="maven.conf" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\Test_Maven\conf"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="user.country" value="IN"/>
+    <property name="ALLUSERSPROFILE" value="C:\ProgramData"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_162\jre"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="os.version" value="10.0"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/Divorcee/1344/display/redirect"/>
+    <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
+    <property name="VISUALSVN_SERVER" value="C:\Program Files\VisualSVN Server\"/>
+    <property name="configsetroot" value="C:\WINDOWS\ConfigSetRoot"/>
+    <property name="TMP" value="C:\WINDOWS\TEMP"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.version" value="25.162-b12"/>
+    <property name="user.variant" value=""/>
+    <property name="JOB_DISPLAY_URL" value="http://localhost:8080/job/Divorcee/display/redirect"/>
+    <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_162"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="CommonProgramFiles" value="C:\Program Files (x86)\Common Files"/>
+    <property name="ComSpec" value="C:\WINDOWS\system32\cmd.exe"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="POM_PACKAGING" value="jar"/>
+    <property name="asl.log" value="Destination=file"/>
+    <property name="SERVICE_ID" value="Jenkins"/>
+    <property name="COMPUTERNAME" value="DESKTOP-E21Q8AT"/>
+    <property name="user.script" value=""/>
+    <property name="POM_GROUPID" value="com.sms"/>
+    <property name="VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\"/>
+    <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
+    <property name="PUBLIC" value="C:\Users\Public"/>
+    <property name="BUILD_TAG" value="jenkins-Divorcee-1344"/>
+    <property name="JENKINS_SERVER_COOKIE" value="50929e6cd1bd21ff"/>
+    <property name="HUDSON_URL" value="http://localhost:8080/"/>
+    <property name="ProgramData" value="C:\ProgramData"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="USERPROFILE" value="C:\WINDOWS\system32\config\systemprofile"/>
+    <property name="CLASSPATH" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven/bin;C:\Program Files\Java\jdk1.8.0_162/bin;C:\Program Files\Java\jdk1.8.0_162/bin;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Program Files (x86)\Python37-32\Scripts\;C:\Program Files (x86)\Python37-32\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\New folder\Maven\apache-maven-3.5.4\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\WINDOWS\System32\OpenSSH\;D:\android-sdks\tools\;D:\android-sdks\tools\;C:\Users\amuthan\Downloads\chromedriver_win32\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="APPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Roaming"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="maven.home" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\Test_Maven"/>
+    <property name="java.class.path" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.12-alpha-1.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven\boot\plexus-classworlds-2.5.2.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven/conf/logging"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.25.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 63804"/>
+    <property name="Path" value="C:\Program Files\Java\jdk1.8.0_162/bin;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Program Files (x86)\Python37-32\Scripts\;C:\Program Files (x86)\Python37-32\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\New folder\Maven\apache-maven-3.5.4\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\WINDOWS\System32\OpenSSH\;D:\android-sdks\tools\;D:\android-sdks\tools\;C:\Users\amuthan\Downloads\chromedriver_win32\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PROCESSOR_ARCHITECTURE" value="x86"/>
+    <property name="PATH+JDK" value="C:\Program Files\Java\jdk1.8.0_162/bin"/>
+    <property name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 158 Stepping 9, GenuineIntel"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="M2_HOME" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven"/>
+    <property name="java.io.tmpdir" value="C:\WINDOWS\TEMP\"/>
+    <property name="OS" value="Windows_NT"/>
+    <property name="HUDSON_HOME" value="C:\Program Files (x86)\Jenkins"/>
+    <property name="PATH+MAVEN" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven/bin"/>
+    <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/Divorcee/1344/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="SystemRoot" value="C:\WINDOWS"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="C:\Users\amuthan\eclipse-workspace\Sample_Project"/>
+    <property name="JOB_URL" value="http://localhost:8080/job/Divorcee/"/>
+    <property name="USERDOMAIN" value="WORKGROUP"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="MAVEN_HOME" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\test_maven"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="BUILD_NUMBER" value="1344"/>
+    <property name="BASE" value="C:\Program Files (x86)\Jenkins"/>
+    <property name="JENKINS_URL" value="http://localhost:8080/"/>
+    <property name="PROCESSOR_REVISION" value="9e09"/>
+    <property name="ProgramW6432" value="C:\Program Files"/>
+    <property name="windir" value="C:\WINDOWS"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="SystemDrive" value="C:"/>
+    <property name="maven3.interceptor" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar"/>
+    <property name="WORKSPACE" value="C:\Program Files (x86)\Jenkins\workspace\Divorcee"/>
+    <property name="maven3.interceptor.common" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar"/>
+    <property name="WINSW_EXECUTABLE" value="C:\Program Files (x86)\Jenkins\jenkins.exe"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files\VisualSVN Server\PowerShellModules"/>
+    <property name="DriverData" value="C:\Windows\System32\Drivers\DriverData"/>
+  </properties>
+  <testcase name="login" classname="com.TestScripts.LoginTest" time="12.176">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.LoginTest.login(LoginTest.java:46)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a) on port 35112
+Only local connections are allowed.
+Jul 01, 2019 2:57:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="smsTest" classname="com.TestScripts.LoginTest" time="20.245">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.LoginTest.smsTest(LoginTest.java:264)
+</failure>
+    <system-out><![CDATA[https://www.communitymatrimony.com/
+https://www.communitymatrimony.com/
+www.communitymatrimony.com/
+www.communitymatrimony.com
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.communitymatrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:57:51 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="918098882244" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71e5809649g1f410110rdbkcMATRIMONY2" SUBMITDATE="2019-07-01 14:58:09" ID="1"></GUID></MESSAGEACK>
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.communitymatrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:57:51 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="916302165648" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71e5809699g1f410110xob5xMATRIMONY2" SUBMITDATE="2019-07-01 14:58:09" ID="1"></GUID></MESSAGEACK>
+Sending....
+Mail Sent Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="payment" classname="com.TestScripts.PayMentTest" time="20.539">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.PayMentTest.payment(PayMentTest.java:54)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a) on port 12584
+Only local connections are allowed.
+Jul 01, 2019 2:58:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="smsTest" classname="com.TestScripts.PayMentTest" time="24.828">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.PayMentTest.smsTest(PayMentTest.java:314)
+</failure>
+    <system-out><![CDATA[https://www.communitymatrimony.com/
+https://www.communitymatrimony.com/
+www.communitymatrimony.com/
+www.communitymatrimony.com
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.communitymatrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:58:13 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="918098882244" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71e583728111f4101107zm18MATRIMONY2" SUBMITDATE="2019-07-01 14:58:37" ID="1"></GUID></MESSAGEACK>
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.communitymatrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:58:13 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="916302165648" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71e5837328h1f410110tspi4MATRIMONY2" SUBMITDATE="2019-07-01 14:58:37" ID="1"></GUID></MESSAGEACK>
+Sending....
+Mail Sent Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="divorceeLogin" classname="com.TestScripts.DivorceeLoginTest" time="26.239">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceeLoginTest.divorceeLogin(DivorceeLoginTest.java:50)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a) on port 32966
+Only local connections are allowed.
+Jul 01, 2019 2:58:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="smsTest" classname="com.TestScripts.DivorceeLoginTest" time="30.548">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceeLoginTest.smsTest(DivorceeLoginTest.java:269)
+</failure>
+    <system-out><![CDATA[https://www.divorceematrimony.com/
+https://www.divorceematrimony.com/
+www.divorceematrimony.com/
+www.divorceematrimony.com
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.divorceematrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:58:42 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="918098882244" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71e5912361h1f410110pwcabMATRIMONY2" SUBMITDATE="2019-07-01 14:59:12" ID="1"></GUID></MESSAGEACK>
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.divorceematrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:58:42 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="916302165648" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71e591240821f410110r3948MATRIMONY2" SUBMITDATE="2019-07-01 14:59:12" ID="1"></GUID></MESSAGEACK>
+Sending....
+Mail Sent Successfully
+]]></system-out>
+  </testcase>
+  <testcase name="divorceePayment" classname="com.TestScripts.DivorceePayment" time="94.22">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceePayment.divorceePayment(DivorceePayment.java:52)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a) on port 21921
+Only local connections are allowed.
+Jul 01, 2019 2:59:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="smsTest" classname="com.TestScripts.DivorceePayment" time="98.608">
+    <failure message="Truncated ZIP file" type="java.io.IOException">java.io.IOException: Truncated ZIP file
+	at com.TestScripts.DivorceePayment.smsTest(DivorceePayment.java:317)
+</failure>
+    <system-out><![CDATA[https://www.divorceematrimony.com/
+https://www.divorceematrimony.com/
+www.divorceematrimony.com/
+www.divorceematrimony.com
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.divorceematrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:59:16 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="918098882244" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71f005419111f4101108p1bpMATRIMONY2" SUBMITDATE="2019-07-01 15:00:54" ID="1"></GUID></MESSAGEACK>
+
+Sending 'POST' request to URL : http://api.myvaluefirst.com/psms/servlet/psms.Eservice2
+Post parameters : data=<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE MESSAGE SYSTEM "http://127.0.0.1/psms/dtd/message.dtd" ><MESSAGE><USER USERNAME="matrimony2" PASSWORD="matrimony02"/><SMS UDH="0" CODING="1" TEXT="Level 1 
+Module : null
+Platform : Desktop
+Error on : null
+Error Description : null
+Domain Name : www.divorceematrimony.com
+Location : Adayar-Chennai
+Mon Jul 01 14:59:16 IST 2019" PROPERTY="0" ID="1"><ADDRESS FROM="CMATRI" TO="916302165648" SEQ="1" TAG="some clientside random data" /></SMS></MESSAGE>&action=send
+Response Code : 200
+<?xml version="1.0" encoding="ISO-8859-1"?><MESSAGEACK><GUID GUID="kj71f0054238f1f410110oftq4MATRIMONY2" SUBMITDATE="2019-07-01 15:00:54" ID="1"></GUID></MESSAGEACK>
+Sending....
+Mail Sent Successfully
+]]></system-out>
+  </testcase>
+</testsuite>

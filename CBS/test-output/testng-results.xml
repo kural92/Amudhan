@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="413869" started-at="2020-03-19T05:37:11Z" finished-at="2020-03-19T05:44:05Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="413869" started-at="2020-03-19T05:37:11Z" finished-at="2020-03-19T05:44:05Z">
+      <class name="com.EditPP.EditPI">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.EditPP.EditPI@c81cdd1]" name="setUp" is-config="true" duration-ms="3418" started-at="2020-03-19T05:37:08Z" finished-at="2020-03-19T05:37:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="piEditing()[pri:0, instance:com.EditPP.EditPI@c81cdd1]" name="piEditing" duration-ms="413844" started-at="2020-03-19T05:37:12Z" finished-at="2020-03-19T05:44:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- piEditing -->
+      </class> <!-- com.EditPP.EditPI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
