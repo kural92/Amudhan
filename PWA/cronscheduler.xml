@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Android.PWA.PwaPayment"/>
+      <class name="Android.PWA.PreferredEducation"/>
+      <class name="Android.PWA.PwaSample"/>
+      <class name="Android.PWA.PreferredLocation"/>
+      <class name="Android.PWA.PasswordChange"/>
+      <class name="Android.PWA.Register"/>
+      <class name="Android.PWA.PwaLogin"/>
+      <class name="Android.PWA.PwaRegister"/>
+      <class name="Android.PWA.RegisterationTest"/>
+      <class name="Android.PWA.DashBoardLocation"/>
+      <class name="Android.PWA.DiscoverMatches"/>
+      <class name="Android.PWA.Redmi"/>
+      <class name="Android.PWA.PreferredOccupation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

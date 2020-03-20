@@ -1,0 +1,8 @@
+<suite name="Android" parallel="tests" thread-count="5">
+	<test name="Device-Samsung Galaxy Note 5 A0099">
+		<parameter name="deviceQuery" value="@serialNumber='85b65151454a4f54'"/>
+		<classes>
+			<class name="com.experitest.auto.AndroidDemoTest"/>
+		</classes>
+	</test>
+</suite>
