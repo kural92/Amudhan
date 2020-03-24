@@ -102,7 +102,7 @@ public static void select_deselectAll(WebElement element) {
 
 //////////    Excel    COde   ///////////////////////
 public static String getExcelDataUrl(String sheetName, int rowNum, int colNum) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\LoginTestData_Mohan2222.xlsx");
+	FileInputStream fis = new FileInputStream("//Excel//LoginTestData_Mohan2222.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
  Row row = sh.getRow(rowNum);
@@ -114,7 +114,7 @@ public static String getExcelDataUrl(String sheetName, int rowNum, int colNum) t
 
 
 public static String getExcelData(String sheetName, int rowNum, int colNum) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
  Row row = sh.getRow(rowNum);
@@ -125,7 +125,7 @@ public static String getExcelData(String sheetName, int rowNum, int colNum) thro
 
 
 public static int getExcelRandomRowNum(String sheetName) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
  Random rand = new Random();
@@ -133,13 +133,13 @@ public static int getExcelRandomRowNum(String sheetName) throws Throwable{
  return rowNum;
 }
 public static void setExcelData(String sheetName, int rowNum, int colNum,String data) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
  Row row = sh.getRow(rowNum);
  Cell cel = row.createCell(colNum);
  cel.setCellValue(data);
- FileOutputStream fos = new FileOutputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+ FileOutputStream fos = new FileOutputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
 	wb.write(fos);
 	wb.close();
 }

@@ -1,10 +1,8 @@
 package com.EditPP;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 
-import org.apache.bcel.generic.BASTORE;
-import org.apache.commons.collections.functors.IfClosure;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,9 +27,11 @@ public class EditPI extends BaseTest{
 		// test=reports.startTest("Divorcee Negative Payment");
 		// test.log(LogStatus.PASS, "Divorcee Negative Payment Test Started");
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Driver\\chromedriver.exe");
+				".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
+		//ChromeOptions options = new ChromeOptions();
+	//	options.addArguments("--disable-notifications");
+	//	options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
 	
 	}
@@ -72,6 +72,16 @@ public class EditPI extends BaseTest{
 			// TODO: handle exception
 		}
 		
+		Thread.sleep(5000);
+		try {
+			Alert al = driver.switchTo().alert();
+			al.accept();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		Thread.sleep(5000);
 		try {
 			BaseTest.click(driver.findElement(By.xpath("//*[@id=\"special_offer_lightpic1\"]/div[1]/div/a/img")));
 		} catch (Exception e2) {
@@ -95,10 +105,10 @@ public class EditPI extends BaseTest{
 		EditPIMethod.basicDetail();
 		EditPIMethod.educationDetail();
 		EditPIMethod.familyDetails();
-    	EditPIMethod.hobby();
-     	EditPIMethod.music();
-        EditPIMethod.sports();
-	    EditPIMethod.hobbies();
+    //	EditPIMethod.hobby();
+     //	EditPIMethod.music();
+       // EditPIMethod.sports();
+	    //EditPIMethod.hobbies();
 	    EditPIMethod.editPartnerPrefernce();
 	    EditPIMethod.locationDetail();
 	    EditPIMethod.email_mobileno_PI_edit();

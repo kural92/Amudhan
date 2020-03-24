@@ -10,10 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import com.relevantcodes.extentreports.LogStatus;
 
 import base.BaseTest;
 import pom.cmlogin.GothramPOM;
