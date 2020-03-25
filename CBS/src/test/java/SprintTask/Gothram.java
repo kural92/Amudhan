@@ -1,4 +1,4 @@
------------------package SprintTask;
+package SprintTask;
 
 import java.awt.AWTException;
 import java.awt.Robot;

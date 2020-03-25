@@ -610,7 +610,104 @@ public class Search_POM extends BaseTest{
 	}
 	
 	
+	@FindBy(id="eating1")
+	private WebElement Advanced_Eating_Vegetarian;	
+	public WebElement getAdvanced_Eating_Vegetarian() {
+		return Advanced_Eating_Vegetarian;
+	}
+
+
+
+	@FindBy(id="eating2")
+	private WebElement Advanced_Eating_NonVegetarian;	
+	public WebElement getAdvanced_Eating_NonVegetarian() {
+		return Advanced_Eating_NonVegetarian;
+	}
+
+
+
+	@FindBy(id="eating3")
+	private WebElement Advanced_Eating_Egg_tarian;
+	public WebElement getAdvanced_Eating_Egg_tarian() {
+		return Advanced_Eating_Egg_tarian;
+	}
+
+
+
+	@FindBy(id="eating4")
+	private WebElement Advanced_Eating_Vegan;	
+	public WebElement getAdvanced_Eating_Vegan() {
+		return Advanced_Eating_Vegan;
+	}
+
+
+
+	@FindBy(id="eating")
+	private WebElement Advanced_Eating_Any;	
+	public WebElement getAdvanced_Eating_Any() {
+		return Advanced_Eating_Any;
+	}
+
+
+
+	@FindBy(id="smoking1")
+	private WebElement Advanced_Smoking_NonSmoker;	
+	public WebElement getAdvanced_Smoking_NonSmoker() {
+		return Advanced_Smoking_NonSmoker;
+	}
+
 	
+
+	@FindBy(id="smoking2")
+	private WebElement Advanced_Smoking_LightSmoker;	
+	public WebElement getAdvanced_Smoking_LightSmoker() {
+		return Advanced_Smoking_LightSmoker;
+	}
+
+
+
+	@FindBy(id="smoking3")
+	private WebElement Advanced_Smoking_RegularSmoker;
+	public WebElement getAdvanced_Smoking_RegularSmoker() {
+		return Advanced_Smoking_RegularSmoker;
+	}
+
+
+
+	@FindBy(id="smoking")
+	private WebElement Advanced_Smoking_Any;
+	public WebElement getAdvanced_Smoking_Any() {
+		return Advanced_Smoking_Any;
+	}
+
+	@FindBy(id = "drinking1")
+	private WebElement Advanced_Non_Drinker;
+	public WebElement getAdvanced_Non_Drinker() {
+		return Advanced_Non_Drinker;
+	}
+
+
+
+	@FindBy(id = "drinking2")
+	private WebElement Advanced_Light_Drinker;
+	public WebElement getAdvanced_Light_Drinker() {
+		return Advanced_Light_Drinker;
+	}
+
+
+
+	@FindBy(id = "drinking3")
+	private WebElement Advanced_Regular_Drinker;
+	public WebElement getAdvanced_Regular_Drinker() {
+		return Advanced_Regular_Drinker;
+	}
+	
+	
+	@FindBy(id = "drinking")
+	private WebElement Advanced_Drinker_Any;
+	public WebElement getAdvanced_Drinker_Any() {
+		return Advanced_Drinker_Any;
+	}
 	
 }
 	
