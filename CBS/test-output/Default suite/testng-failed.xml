@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.EditPP.EditPI"/>
+      <class name="com.search.Search"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="com.EditPP.EditPI">
+      <class name="com.search.Search">
         <methods>
-          <include name="piEditing"/>
           <include name="setUp"/>
+          <include name="regularSearch"/>
         </methods>
-      </class> <!-- com.EditPP.EditPI -->
+      </class> <!-- com.search.Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
