@@ -6,4 +6,14 @@
       <class name="com.search.Search"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+      <class name="com.search.Search">
+        <methods>
+          <include name="setUp"/>
+          <include name="regularSearch"/>
+        </methods>
+      </class> <!-- com.search.Search -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
