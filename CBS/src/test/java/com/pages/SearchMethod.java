@@ -374,7 +374,7 @@ if (SubCaste.contains(", ")) {
 /////////////////////////////////////////////////////////////////////////////////	
 		// Sub Caste /////
 
-		
+	/*	
 		 String SubCaste = BaseTest.getExcelData("Advanced Search", 1, 7);
 		 Thread.sleep(2000);
 		 BaseTest.click(s.getRegular_Subcaste_Value());
@@ -414,6 +414,8 @@ if (SubCaste.contains(", ")) {
 						Thread.sleep(1000);
 						acc.doubleClick(driver.findElement(By.xpath("//option[contains(text(),'"+MotherTongue+"')]"))).build().perform();
 					}
+   */
+	
 	//////////////////////////////////////////////////////////////////////////////////////////////
 				
 				String PhysicalStatus =  BaseTest.getExcelData("Advanced Search", 1, 13);
@@ -446,7 +448,7 @@ if (SubCaste.contains(", ")) {
 				
 				// Star /////
 
-				
+	/*			
 				 String Star = BaseTest.getExcelData("Advanced Search", 1, 15);
 				 Thread.sleep(2000);
 				 BaseTest.click(s.getAdvanced_Star_Value());
@@ -509,7 +511,7 @@ if (SubCaste.contains(", ")) {
 									Thread.sleep(1000);
 									acc.doubleClick(driver.findElement(By.xpath("//option[contains(text(),'"+Countryliving+"')]"))).build().perform();
 								}
-							
+		*/					
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 							
 							///  resident Status   //////////////////
@@ -565,7 +567,7 @@ if (SubCaste.contains(", ")) {
 			}				
 							
 ///////////////////////////////////////////////////////////////////
-			
+		/*	
 			String Education = BaseTest.getExcelData("Advanced Search", 1, 10);
 			Thread.sleep(2000);
 			BaseTest.click(s.getAdvanced_Education_Value());  
@@ -606,6 +608,10 @@ if (SubCaste.contains(", ")) {
 					Thread.sleep(1000);
 					acc.doubleClick(driver.findElement(By.xpath("//option[contains(text(),'"+Occupation+"')]"))).build().perform();
 				}
+				
+				*/
+			
+			
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			      //////////////////////////////////   Annual income  ////////////////////
@@ -819,7 +825,235 @@ if (SubCaste.contains(", ")) {
 	}
 	
 	
+	public static void keyWordSearch() throws Throwable {
+		
+		
+		Search_POM s = new Search_POM(driver);
+		Actions acc = new Actions(driver);
+		/////////////////////////////////////////////
+           
+           Thread.sleep(2000);
+   		BaseTest.click(s.getSearch_Menu_btn());
+
+   		try {
+   			Thread.sleep(5000);
+   			acc.moveToElement(driver.findElement(By.xpath("//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[3]"))).build()
+   					.perform();
+   			driver.findElement(By.id("chatbuddylistwin")).click();
+   			acc.moveToElement(driver.findElement(By.xpath("//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[3]"))).click()
+   					.build().perform();
+   			
+   		} catch (Exception e) {
+
+   		}
+
+   		Thread.sleep(2000);
+
+   		BaseTest.select_text(s.getAdvanced_AgeFrom_DD(), BaseTest.getExcelData("KeyWord Search", 1, 1));
+   		BaseTest.select_text(s.getAdvanced_AgeTo_DD(), BaseTest.getExcelData("KeyWord Search", 1, 2));
+
+   		BaseTest.select_text(s.getAdvanced_HeightFrom_DD(), BaseTest.getExcelData("KeyWord Search", 1, 3));
+   		BaseTest.select_text(s.getAdvanced_HeightTo_DD(), BaseTest.getExcelData("KeyWord Search", 1, 4));
+
+   //////////////////////////////////////////////////////////////////////////
+
+   ////////////////////////////////////Marital Status   ////////////////////////////////////		
+   		Thread.sleep(2000);
+   		if (BaseTest.getExcelData("KeyWord Search", 1, 5).contains("Unmarried")) {
+   			if (!s.getAdvanced_Marital_Unmarried().isSelected()) {
+   				BaseTest.click(s.getAdvanced_Marital_Unmarried());
+   			} else {
+   				System.out.println("Unmarried Marital is Already Selected");
+   			}
+
+   		} else {
+   		}
+   		if (BaseTest.getExcelData("KeyWord Search", 1, 5).contains("Widow / Widower")) {
+   			if (!s.getAdvanced_Marital_Widow().isSelected()) {
+   				BaseTest.click(s.getAdvanced_Marital_Widow());
+   			} else {
+   				System.out.println("Widow / Widower Marital is Already Selected");
+   			}
+
+   		} else {
+   		}
+   		if (BaseTest.getExcelData("KeyWord Search", 1, 5).contains("Divorced")) {
+   			if (!s.getAdvanced_Marital_Divorceed().isSelected()) {
+   				BaseTest.click(s.getAdvanced_Marital_Divorceed());
+   			} else {
+   				System.out.println("Divorced Marital is Already Selected");
+   			}
+
+   		} else {
+   		}
+   		if (BaseTest.getExcelData("KeyWord Search", 1, 5).contains("Separated")) {
+   			if (!s.getAdvanced_Marital_Seperated().isSelected()) {
+   				BaseTest.click(s.getAdvanced_Marital_Seperated());
+   			} else {
+   				System.out.println("Seperated Marital is Already Selected");
+   			}
+
+   		} else {
+   		}
+   		if (BaseTest.getExcelData("KeyWord Search", 1, 5).contains("Any")) {
+   			if (!s.getAdvanced_Marital_Any().isSelected()) {
+   				BaseTest.click(s.getRegular_Marital_Any());
+   			} else {
+   				System.out.println("Any Marital is Already Selected");
+   			}
+   		}
+   /////////////////////////////////////////   *  *  *  *  *   ///////////////////////////////	
+   /////////     Have Children  //////
+   		if (!s.getAdvanced_Marital_Unmarried().isSelected() || s.getAdvanced_Marital_Divorceed().isSelected()
+   				|| s.getAdvanced_Marital_Seperated().isSelected() || s.getAdvanced_Marital_Widow().isSelected()
+   				|| s.getAdvanced_Marital_Any().isSelected()) {
+   			if (BaseTest.getExcelData("KeyWord Search", 1, 6).equals("Doesn't matter")) {
+   				if (!s.getAdvanced_HaveChild__Doesnt().isSelected()) {
+   					BaseTest.click(s.getAdvanced_HaveChild__Doesnt());
+   				} else {
+   					System.out.println("Doesn't Matter Children Status is Already Selected");
+   				}
+
+   			} else if (BaseTest.getExcelData("KeyWord Search", 1, 6).equals("Yes. Living together")) {
+   				if (!s.getAdvanced_HaveChild_YesLiving().isSelected()) {
+   					BaseTest.click(s.getAdvanced_HaveChild_YesLiving());
+   				} else {
+   					System.out.println("Yes Living Together Children Status is Already Selected");
+   				}
+   			} else if (BaseTest.getExcelData("KeyWord Search", 1, 6).equals("Yes. Not living together")) {
+   				if (!s.getAdvanced_HaveChild_Yes_Not_Living().isSelected()) {
+   					BaseTest.click(s.getAdvanced_HaveChild_Yes_Not_Living());
+   				} else {
+   					System.out.println("Yes, Not Living Together Children Status is Already Selected");
+   				}
+   			} else {
+   				if (!s.getAdvanced_HaveChild_No().isSelected()) {
+   					BaseTest.click(s.getAdvanced_HaveChild_No());
+   				} else {
+   					System.out.println("No Children Status is Already Selected");
+   				}
+   			}
+   		} else {
+   			System.out.println("Marital Status is UnMarried - So there is no Children Status to Display/Select");
+   		}
+
+   		////////////////////////////////////////////////////////////////////
+   		
+   		BaseTest.typeData(s.getKeyWordSearch_Input(), BaseTest.getExcelData("KeyWord Search", 1, 7));
+   		
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+String ShowProfile = BaseTest.getExcelData("KeyWord Search", 1, 8);
+
+if (ShowProfile.contains("Photo")) {
+if (!s.getAdvanced_ShowProfile_Photo().isSelected()) {
+BaseTest.click(s.getAdvanced_ShowProfile_Photo());
+} else {
+System.out.println("Show Profile With Photo was Already Selected");
+}
+} else {
+}
+if (ShowProfile.contains("Horoscope")) {
+if (!s.getAdvanced_ShowProfile_Horoscope().isSelected()) {
+BaseTest.click(s.getAdvanced_ShowProfile_Horoscope());
+} else {
+System.out.println("Show Profile With Horoscopw was Already Selected");
+}
+} else {
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+String DontShow = BaseTest.getExcelData("KeyWord Search", 1, 9);
+if (DontShow.contains("Contacted")) {
+	if (!s.getAdvanced_DontShow_Contacted().isSelected()) {
+		BaseTest.click(s.getAdvanced_DontShow_Contacted());
+	} else {
+		System.out.println("Dont Show Already Contacted Profile was Already Selected");
+	}
+} else {
+}
+
+if (DontShow.contains("Viewed")) {
+	if (!s.getAdvanced_DontShow_Viewed().isSelected()) {
+		BaseTest.click(s.getAdvanced_DontShow_Viewed());
+	} else {
+		System.out.println("Dont Show Already Viewed Profile was Already Selected");
+	}
+} else {
+}
+
+if (DontShow.contains("Shortlisted")) {
+	if (!s.getAdvanced_DontShow_ShortListed().isSelected()) {
+		BaseTest.click(s.getAdvanced_DontShow_ShortListed());
+	} else {
+		System.out.println("Dont Show Already Shortlisted Profile was Already Selected");
+	}
+} else {
+}
+
+if (DontShow.contains("Blocked")) {
+	if (!s.getAdvanced_DontShow_Blocked().isSelected()) {
+		BaseTest.click(s.getAdvanced_DontShow_Blocked());
+	} else {
+		System.out.println("Dont Show Already Blocked Profile was Already Selected");
+	}
+} else {
+}
+
+if (DontShow.contains("Ignored")) {
+	if (!s.getAdvanced_DontShow_Ignored().isSelected()) {
+		BaseTest.click(s.getAdvanced_DontShow_Ignored());
+	} else {
+		System.out.println("Dont Show Already Ignored Profile was Already Selected");
+	}
+} else {
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+BaseTest.click(s.getRegular_SEARCH_Btn());
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+	}
 	
+	
+	public static void searchById() throws Throwable {
+		
+		Search_POM s = new Search_POM(driver);
+		Actions acc = new Actions(driver);
+		
+		  Thread.sleep(2000);
+	   		BaseTest.click(s.getSearch_Menu_btn());
+
+	   		try {
+	   			Thread.sleep(5000);
+	   			acc.moveToElement(driver.findElement(By.xpath("//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[4]"))).build()
+	   					.perform();
+	   			driver.findElement(By.id("chatbuddylistwin")).click();
+	   			acc.moveToElement(driver.findElement(By.xpath("//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[4]"))).click()
+	   					.build().perform();
+	   			
+	   		} catch (Exception e) {
+
+	   		}
+
+	   		Thread.sleep(2000);
+	   		BaseTest.click(s.getSearch_By_Id());
+	   		BaseTest.clear(s.getSearch_By_Id());
+	   		BaseTest.typeData(s.getSearch_By_Id(), BaseTest.getExcelData("KeyWord Search", 1, 10));
+			       
+	   		Thread.sleep(2000);
+	   		BaseTest.click(s.getRegular_SEARCH_Btn());
+			       
+		
+	}
 	
 	
 

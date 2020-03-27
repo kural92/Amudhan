@@ -696,6 +696,8 @@ public class Search_POM extends BaseTest{
 
 
 
+
+
 	@FindBy(id = "drinking3")
 	private WebElement Advanced_Regular_Drinker;
 	public WebElement getAdvanced_Regular_Drinker() {
@@ -707,6 +709,19 @@ public class Search_POM extends BaseTest{
 	private WebElement Advanced_Drinker_Any;
 	public WebElement getAdvanced_Drinker_Any() {
 		return Advanced_Drinker_Any;
+	}
+	
+	@FindBy(id="keywordTxt")
+	private WebElement KeyWordSearch_Input;
+	public WebElement getKeyWordSearch_Input() {
+		return KeyWordSearch_Input;
+	}
+	
+	
+	@FindBy(id="matrisearchid")
+	private WebElement Search_By_Id;
+	public WebElement getSearch_By_Id() {
+		return Search_By_Id;
 	}
 	
 }

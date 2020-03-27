@@ -83,13 +83,13 @@ public class Search extends BaseTest {
 
 		Search_POM s = new Search_POM(driver);
 
-		// SearchMethod.regularSearch();
-           SearchMethod.advancedSearch();
+		try { SearchMethod.regularSearch(); } catch (Exception e) {	}
+		try { SearchMethod.advancedSearch(); } catch (Exception e) {	}
+		try { SearchMethod.keyWordSearch(); } catch (Exception e) {	}
+		try { SearchMethod.searchById(); } catch (Exception e) {	}
 		/////////////////////////////////////////////
 
-
-			       
-			       
+	   
 			       
 	}
 
