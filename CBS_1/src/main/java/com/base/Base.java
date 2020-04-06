@@ -243,7 +243,7 @@ public class Base {
 		    // extent = new ExtentHtmlReporter("C:\\Users\\amuthan\\eclipse-workspace\\com.mobile\\ScreenShot");
 	       
 			 extent=new ExtentReports("C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Report\\"+html,true);
-			 extent.loadConfig(new File("C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\extent-config.xml"));
+			 extent.loadConfig(new File("G:\\Matrimony\\Amudhan\\CBS_1\\extent-config.xml"));
 	    	 //test=reports.startTest("Android Registeration Test");
 	         
 		}

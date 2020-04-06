@@ -31,11 +31,11 @@ public class CBSPayment extends BaseTest {
 		// test=reports.startTest("Divorcee Negative Payment");
 		// test.log(LogStatus.PASS, "Divorcee Negative Payment Test Started");
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Driver\\chromedriver.exe");
+				".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
-		driver.get("https://www.divorceematrimony.com");
+		driver.get("https://www.communitymatrimony.com");
 		driver.manage().window().maximize();
 	}
 
@@ -48,12 +48,12 @@ public class CBSPayment extends BaseTest {
 		// test.log(LogStatus.PASS, "Logging Started");
 		b.click(p.getMatriID());
 		Thread.sleep(3000);
-		b.typeData(p.getMatriID(), b.readValueFromExcelSheet().get(1).get("UserName"));
+		b.typeData(p.getMatriID(), "AGR755407");
 		Thread.sleep(3000);
 		b.click(p.getDpassWordclr1());
 		Thread.sleep(3000);
 		// driver.findElement(By.xpath("BaseTest")).sendKeys("cbstest");
-		b.typeData(p.getDpassword(), b.readValueFromExcelSheet().get(1).get("PassWord"));
+		b.typeData(p.getDpassword(), "cbstest");
 		Thread.sleep(3000);
 		b.click(p.getDlogin());
 		// test.log(LogStatus.PASS, "Logged In Successfully");
@@ -189,13 +189,13 @@ public class CBSPayment extends BaseTest {
 	    public void takeScreenShotOnFailure(ITestResult testResult) throws Exception {
 	    	
 	   	 if (testResult.getStatus()==2) {
-	           BaseTest.sendVFSms3();
+	     //      BaseTest.sendVFSms3();
 	            System.out.println("intial fail");
 	        } else if(testResult.getStatus()==1){
 	            String text = BaseTest.readValueFromExcelSheet1().get(0).get("Result");
 	            System.out.println(text);
 	            if(text.equals("2.0")){
-	            	BaseTest.sendVFSms2();
+	       //     	BaseTest.sendVFSms2();
 	                System.out.println("status change");
 	            }else{
 

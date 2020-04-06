@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="com.testscripts.EditProfileTest">
+      <class name="com.unitTestModule.MatchesUnitTest"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+      <class name="com.unitTestModule.MatchesUnitTest">
         <methods>
-          <include name="htmlReport"/>
           <include name="setUp"/>
-          <include name="editProfileTest2"/>
+          <include name="htmlReport"/>
+          <include name="viewProfileRequesstTestMWML"/>
+          <include name="login"/>
+          <include name="viewProfileRequesstTest_mutual_matches"/>
         </methods>
-      </class> <!-- com.testscripts.EditProfileTest -->
+      </class> <!-- com.unitTestModule.MatchesUnitTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

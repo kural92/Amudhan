@@ -29,7 +29,7 @@ public class RefineSearch extends BaseTest{
 		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		// ChromeOptions options = new ChromeOptions();
-		// options.addArguments("--disable-notifications");
+		 options.addArguments("--disable-notifications");
 		// options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
 
@@ -234,7 +234,28 @@ public class RefineSearch extends BaseTest{
 		
 		Thread.sleep(2000);
 		BaseTest.click(rs.getRefine_Show_More_Btn());
-			
+		
+		try {
+			Set<String> child = driver.getWindowHandles();
+			Thread.sleep(2000);
+			for (String handle : child) {
+				if(!Parent.contains(handle)) {
+					Thread.sleep(1000);
+					driver.switchTo().window(handle);
+					Thread.sleep(2000);
+					driver.close();
+					driver.switchTo().window(Parent);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	try {		
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Show_More_Btn());
+	} catch (Exception e) {
+		// TODO: handle exception
+	}	
 		
 		Thread.sleep(5000);
 		BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetMotherTonguelabel\"]")));
@@ -255,27 +276,220 @@ public class RefineSearch extends BaseTest{
 			// TODO: handle exception
 		}
 		
-		BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetMotherTonguelabel\"]")));
-		
+		//BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetMotherTonguelabel\"]")));
+		String Mother_Tongue = BaseTest.getExcelData("RefineSearch", 1, 7);
 		Thread.sleep(5000);
 		BaseTest.click(rs.getRefine_MotherTongue_More());
+		
+		Thread.sleep(3000);
+		BaseTest.click(rs.getRefine_MotherTongue_Choosed());
+		BaseTest.select_deselectAll(rs.getRefine_MotherTongue_Choosed());
+		
+		Thread.sleep(3000);
+		BaseTest.click(rs.getRefine_MotherTongue_Value());
+		
+		if (Mother_Tongue.contains(", ")) {
+			String[] mother_tongue_split = Mother_Tongue.split(", ");
+			for (int j = 0; j < mother_tongue_split.length; j++) {
+				if (driver.findElement(By.xpath("//option[contains(text(),'"+j+"')]")).isDisplayed()) {
+					Thread.sleep(3000);
+					acc.moveToElement(driver.findElement(By.xpath("//option[contains(text(),'"+j+"')]"))).doubleClick().build().perform();
+				} else {
+					Thread.sleep(3000);
+					System.out.println("The Given value "+j+"is not present in Mother Tongue DropDown");
+				}
+			}
+		} else if (Mother_Tongue.length()<0) {
+			Thread.sleep(2000);
+			if (driver.findElement(By.xpath("//option[contains(text(),'"+Mother_Tongue+"')]")).isDisplayed()) {
+				Thread.sleep(2000);
+				acc.moveToElement(driver.findElement(By.xpath("//option[contains(text(),'"+Mother_Tongue+"')]"))).doubleClick().build().perform();
+			} else {
+				System.out.println("The Given value "+Mother_Tongue+"is not present in Mother Tongue DropDown");
+			}
+		} else {
+			System.out.println("The Given value "+Mother_Tongue+"is not present in Mother Tongue DropDown");
+		}
+		
+		
+	
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Submit());
+		
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 		
 		
 		
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Show_More_Btn());
+		
+		try {
+			Set<String> child = driver.getWindowHandles();
+			Thread.sleep(2000);
+			for (String handle : child) {
+				if(!Parent.contains(handle)) {
+					Thread.sleep(1000);
+					driver.switchTo().window(handle);
+					Thread.sleep(2000);
+					driver.close();
+					driver.switchTo().window(Parent);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	try {		
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Show_More_Btn());
+	} catch (Exception e) {
+		// TODO: handle exception
+	}	
+		
+		Thread.sleep(5000);
+		BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetSubcastelabel\"]")));
+		
+		try {
+			Set<String> child = driver.getWindowHandles();
+			Thread.sleep(2000);
+			for (String handle : child) {
+				if(!Parent.contains(handle)) {
+					Thread.sleep(1000);
+					driver.switchTo().window(handle);
+					Thread.sleep(2000);
+					driver.close();
+					driver.switchTo().window(Parent);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		//BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetMotherTonguelabel\"]")));
+		String SubCaste = BaseTest.getExcelData("RefineSearch", 1, 8);
+		Thread.sleep(5000);
+		BaseTest.click(rs.getRefine_SubCaste_More());
+		
+		Thread.sleep(3000);
+		BaseTest.click(rs.getRefine_SubCaste_Choosed());
+		BaseTest.select_deselectAll(rs.getRefine_SubCaste_Choosed());
+		
+		Thread.sleep(3000);
+		BaseTest.click(rs.getRefine_SubCaste_Value());
+		
+		if (SubCaste.contains(", ")) {
+			String[] SubCaste_split = SubCaste.split(", ");
+			for (int j = 0; j < SubCaste_split.length; j++) {
+				if (driver.findElement(By.xpath("//option[contains(text(),'"+j+"')]")).isDisplayed()) {
+					Thread.sleep(3000);
+					acc.moveToElement(driver.findElement(By.xpath("//option[contains(text(),'"+j+"')]"))).doubleClick().build().perform();
+				} else {
+					Thread.sleep(3000);
+					System.out.println("The Given value "+j+"is not present in SubCaste DropDown");
+				}
+			}
+		} else if (SubCaste.length()<0) {
+			Thread.sleep(2000);
+			if (driver.findElement(By.xpath("//option[contains(text(),'"+SubCaste+"')]")).isDisplayed()) {
+				Thread.sleep(2000);
+				acc.moveToElement(driver.findElement(By.xpath("//option[contains(text(),'"+SubCaste+"')]"))).doubleClick().build().perform();
+			}
+		else{
+			System.out.println("The Given value "+SubCaste+"is not present in SubCaste DropDown");
+		}
+		} else { System.out.println("The Given value "+SubCaste+"is not present in SubCaste DropDown");}
+		
+	
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Submit());
+		
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		
+	
 		
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Show_More_Btn());
 		
+		try {
+			Set<String> child = driver.getWindowHandles();
+			Thread.sleep(2000);
+			for (String handle : child) {
+				if(!Parent.contains(handle)) {
+					Thread.sleep(1000);
+					driver.switchTo().window(handle);
+					Thread.sleep(2000);
+					driver.close();
+					driver.switchTo().window(Parent);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	try {		
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Show_More_Btn());
+	} catch (Exception e) {
+		// TODO: handle exception
+	}	
 		
+		Thread.sleep(5000);
+		BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetSubcastelabel\"]")));
 		
+		try {
+			Set<String> child = driver.getWindowHandles();
+			Thread.sleep(2000);
+			for (String handle : child) {
+				if(!Parent.contains(handle)) {
+					Thread.sleep(1000);
+					driver.switchTo().window(handle);
+					Thread.sleep(2000);
+					driver.close();
+					driver.switchTo().window(Parent);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
+		//BaseTest.click(driver.findElement(By.xpath("//*[@id=\"facetMotherTonguelabel\"]")));
+		String SubCaste = BaseTest.getExcelData("RefineSearch", 1, 8);
+		Thread.sleep(5000);
+		BaseTest.click(rs.getRefine_SubCaste_More());
 		
+		Thread.sleep(3000);
+		BaseTest.click(rs.getRefine_SubCaste_Choosed());
+		BaseTest.select_deselectAll(rs.getRefine_SubCaste_Choosed());
 		
+		Thread.sleep(3000);
+		BaseTest.click(rs.getRefine_SubCaste_Value());
 		
+		if (SubCaste.contains(", ")) {
+			String[] SubCaste_split = SubCaste.split(", ");
+			for (int j = 0; j < SubCaste_split.length; j++) {
+				if (driver.findElement(By.xpath("//option[contains(text(),'"+j+"')]")).isDisplayed()) {
+					Thread.sleep(3000);
+					acc.moveToElement(driver.findElement(By.xpath("//option[contains(text(),'"+j+"')]"))).doubleClick().build().perform();
+				} else {
+					Thread.sleep(3000);
+					System.out.println("The Given value "+j+"is not present in SubCaste DropDown");
+				}
+			}
+		} else if (SubCaste.length()<0) {
+			Thread.sleep(2000);
+			if (driver.findElement(By.xpath("//option[contains(text(),'"+SubCaste+"')]")).isDisplayed()) {
+				Thread.sleep(2000);
+				acc.moveToElement(driver.findElement(By.xpath("//option[contains(text(),'"+SubCaste+"')]"))).doubleClick().build().perform();
+			}
+		else{
+			System.out.println("The Given value "+SubCaste+"is not present in SubCaste DropDown");
+		}
+		} else { System.out.println("The Given value "+SubCaste+"is not present in SubCaste DropDown");}
 		
-		
-		
+	
+		Thread.sleep(2000);
+		BaseTest.click(rs.getRefine_Submit());
 		
 		
 		
@@ -284,15 +498,4 @@ public class RefineSearch extends BaseTest{
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

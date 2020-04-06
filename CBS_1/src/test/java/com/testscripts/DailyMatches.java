@@ -3,8 +3,6 @@
 import java.util.List;
 import java.util.Set;
 
-import org.dom4j.tree.BaseElement;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,14 +10,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.base.Base;
 import com.pom.Inbox;
-import com.thoughtworks.selenium.webdriven.commands.Click;
 
 public class DailyMatches extends Base {
 
@@ -29,7 +25,7 @@ public class DailyMatches extends Base {
 	public void startUp() {
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+				".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -52,7 +48,7 @@ public class DailyMatches extends Base {
 		Thread.sleep(3000);
 
 		Base.click(i.getMatriId());
-		Base.typeData(i.getMatriId(), "EZH811385");
+		Base.typeData(i.getMatriId(), "AGR755407");
 
 		Base.click(i.getPaswwordclr());
 		Base.typeData(i.getPassword(), "cbstest");

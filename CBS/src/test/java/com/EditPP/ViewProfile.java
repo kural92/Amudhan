@@ -26,7 +26,7 @@ public class ViewProfile extends BaseTest{
 		// test=reports.startTest("Divorcee Negative Payment");
 		// test.log(LogStatus.PASS, "Divorcee Negative Payment Test Started");
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Driver\\chromedriver.exe");
+				".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -48,9 +48,9 @@ public class ViewProfile extends BaseTest{
 		driver.get("https://www.communitymatrimony.com");
 		driver.manage().window().maximize();
 		BaseTest.click(g.getMatriID());
-		BaseTest.typeData(g.getMatriID(), "EZH710533");
+		BaseTest.typeData(g.getMatriID(), "AGR755407");
 		BaseTest.click(g.getPasswordClear());
-		BaseTest.typeData(g.getPassword(), "cbstest1");
+		BaseTest.typeData(g.getPassword(), "cbstest");
 		BaseTest.click(g.getLogin_btn());
 		
 		

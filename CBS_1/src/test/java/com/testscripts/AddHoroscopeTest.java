@@ -22,7 +22,7 @@ public class AddHoroscopeTest extends Base{
 	
 	   @BeforeMethod
 	   public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -41,7 +41,7 @@ public class AddHoroscopeTest extends Base{
 		   driver.manage().window().maximize();
 		   
 		   Base.click(i.getMatriId());
-		   Base.typeData(i.getMatriId(), "EZH811386");
+		   Base.typeData(i.getMatriId(), "AGR755407");
 		   
 		   Base.click(i.getPaswwordclr());
 		   Base.typeData(i.getPassword(), "cbstest");
