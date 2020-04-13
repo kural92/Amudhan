@@ -3,20 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.unitTestModule.MatchesUnitTest"/>
+      <class name="com.testscripts.DailyMatches"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="com.unitTestModule.MatchesUnitTest">
+      <class name="com.testscripts.DailyMatches">
         <methods>
-          <include name="setUp"/>
+          <include name="startUp"/>
           <include name="htmlReport"/>
-          <include name="viewProfileRequesstTestMWML"/>
-          <include name="login"/>
-          <include name="viewProfileRequesstTest_mutual_matches"/>
+          <include name="dailyMatchesTest"/>
         </methods>
-      </class> <!-- com.unitTestModule.MatchesUnitTest -->
+      </class> <!-- com.testscripts.DailyMatches -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

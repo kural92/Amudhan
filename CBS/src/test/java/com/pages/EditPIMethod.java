@@ -195,6 +195,9 @@ public class EditPIMethod extends BaseTest{
 		
 		BaseTest.clear(i.getPI_Sports_other());
 		BaseTest.typeData(i.getPI_Sports_other(), BaseTest.getExcelData("EditPIHobby", 1, 6));
+		
+		Thread.sleep(3000);
+		BaseTest.click(i.getPI_Basic_Save());
 	}
 	
 	
@@ -235,7 +238,8 @@ public class EditPIMethod extends BaseTest{
 		
 		BaseTest.clear(i.getPI_Music_others());
 		BaseTest.typeData(i.getPI_Music_others(), BaseTest.getExcelData("EditPIHobby", 1, 4));
-		
+		Thread.sleep(3000);
+		BaseTest.click(i.getPI_Basic_Save());
 
 	}
 	
@@ -339,6 +343,8 @@ public class EditPIMethod extends BaseTest{
 		BaseTest.clear(i.getPI_Hobbies_others());
 		BaseTest.typeData(i.getPI_Hobbies_others(), BaseTest.getExcelData("EditPIHobby", 1, 2));
 
+		Thread.sleep(3000);
+		BaseTest.click(i.getPI_Basic_Save());
 	}
 	
 	public static void familyDetails() throws Throwable {
@@ -423,7 +429,8 @@ public class EditPIMethod extends BaseTest{
 	
 	BaseTest.clear(i.getPI_About_Family());
 	BaseTest.typeData(i.getPI_About_Family(), BaseTest.getExcelData("EditPI1", 1, 21));
-		
+	Thread.sleep(3000);
+	BaseTest.click(i.getPI_Basic_Save());
 	
 	}
 
@@ -498,7 +505,8 @@ public class EditPIMethod extends BaseTest{
 			BaseTest.typeData(i.getPI_AnnualIncome_DD_Value(), BaseTest.getExcelData("EditPI", 1, 10));
 		}*/
 		
-		
+		Thread.sleep(3000);
+		BaseTest.click(i.getPI_Basic_Save());
 		
 
 	}
@@ -514,11 +522,20 @@ public class EditPIMethod extends BaseTest{
 		BaseTest.select_text(i.getPI_ProfileCreated_DD(), BaseTest.getExcelData("EditPI", 1, 1));
 		
 		// Name BaseTest.typeData(i.getPI_Name(), BaseTest.getExcelData("EditPI", 1, 2));
+		Thread.sleep(3000);
 		
 		BaseTest.select_text(i.getPI_Day_DD(), BaseTest.getExcelData("EditPI", 1, 3));
+		
+		Thread.sleep(3000);
 		BaseTest.select_text(i.getPI_Month_DD(), BaseTest.getExcelData("EditPI", 1, 4));
 		BaseTest.select_text(i.getPI_Year_DD(), BaseTest.getExcelData("EditPI", 1, 5));
-		
+		Thread.sleep(3000);
+		try {
+			BaseTest.select_text(i.getPI_Day_DD(), BaseTest.getExcelData("EditPI", 1, 3));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		Thread.sleep(3000);
 		String MaritalStatus = BaseTest.getExcelData("EditPI", 1, 6);
 		if (MaritalStatus.contains("Divorced")) {
 			BaseTest.click(i.getPI_Divorceed());
@@ -1317,7 +1334,7 @@ try {           //////////////////         Residing State                 //////
 		
 		Thread.sleep(3000);
 		
-         
+       
          
 
 	}
@@ -1392,6 +1409,8 @@ try {           //////////////////         Residing State                 //////
 				
 			}
 
+			Thread.sleep(3000);
+			BaseTest.click(i.getPI_Basic_Save());
 	}
 	
 	
@@ -1424,7 +1443,7 @@ try {           //////////////////         Residing State                 //////
 	    Thread.sleep(1000);
 	    BaseTest.clear(i.getPI_Mobile_no());
 	    BaseTest.typeData(i.getPI_Mobile_no(), BaseTest.getExcelData("EditPIHobby", 1, 17));
-	//    BaseTest.click(i.getPI_Mobile_no_save_button());
+	    BaseTest.click(i.getPI_Mobile_no_save_button());
 		
 
 	}

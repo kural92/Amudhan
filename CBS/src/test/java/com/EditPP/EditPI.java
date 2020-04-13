@@ -52,7 +52,7 @@ public class EditPI extends BaseTest{
 		driver.get("https://www.communitymatrimony.com");
 		driver.manage().window().maximize();
 		BaseTest.click(g.getMatriID());
-		BaseTest.typeData(g.getMatriID(), "AGR755407");
+		BaseTest.typeData(g.getMatriID(), "AGR752050");
 		BaseTest.click(g.getPasswordClear());
 		BaseTest.typeData(g.getPassword(), "cbstest");
 		BaseTest.click(g.getLogin_btn());
@@ -102,14 +102,14 @@ public class EditPI extends BaseTest{
 		String parent = driver.getWindowHandle();
 		
 		/////////////////////////////////////////////////////////////////
-	//	EditPIMethod.basicDetail();
-	//	EditPIMethod.educationDetail();
-	//	EditPIMethod.familyDetails();
-    //	EditPIMethod.hobby();
-     //	EditPIMethod.music();
-       // EditPIMethod.sports();
-	    //EditPIMethod.hobbies();
-	//    EditPIMethod.editPartnerPrefernce();
+		EditPIMethod.basicDetail();
+		EditPIMethod.educationDetail();
+		EditPIMethod.familyDetails();
+  	EditPIMethod.hobby();
+   	EditPIMethod.music();
+        EditPIMethod.sports();
+	    EditPIMethod.hobbies();
+	    EditPIMethod.editPartnerPrefernce();
 	    EditPIMethod.locationDetail();
 	    EditPIMethod.email_mobileno_PI_edit();
 	    logOut.logoutMethod();

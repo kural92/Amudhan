@@ -45,7 +45,7 @@ public class MatchesUnitTest extends Base{
 			   driver.manage().window().maximize();
 			   
 			   Base.click(i.getMatriId());
-			   Base.typeData(i.getMatriId(), "AGR100176");
+			   Base.typeData(i.getMatriId(), "AGR600764");
 			   
 			   Base.click(i.getPaswwordclr());
 			   Base.typeData(i.getPassword(), "cbstest");

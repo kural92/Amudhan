@@ -31,7 +31,7 @@ public class SearchScroll extends Base{
 	   @BeforeSuite
 	   public void setUp() {
 		
-		   System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+		   System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		   ChromeOptions options = new ChromeOptions();
 		   options.addArguments("--disable-notifications");
 		   driver = new ChromeDriver(options);
@@ -54,11 +54,11 @@ public class SearchScroll extends Base{
 		   System.out.println("Browser Launched successfully");
 		   
 		   Base.click(i.getMatriId());
-		   Base.typeData(s.getMatriId(), "EZH710533");
+		   Base.typeData(s.getMatriId(), "AGR600764");
 		   Thread.sleep(2000);
 		   
 		   Base.click(i.getPaswwordclr());
-		   Base.typeData(s.getPassword(), "cbstest1");
+		   Base.typeData(s.getPassword(), "cbstest");
 		   Thread.sleep(3000);
 		   
 		   Base.click(s.getLoginbtn());

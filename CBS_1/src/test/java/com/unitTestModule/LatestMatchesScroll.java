@@ -23,7 +23,7 @@ public class LatestMatchesScroll extends Base{
 	 
 	   @BeforeTest
 	   public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "G:\\Matrimony\\Amudhan\\CBS\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -41,7 +41,7 @@ public class LatestMatchesScroll extends Base{
 			   driver.manage().window().maximize();
 			   
 			   Base.click(i.getMatriId());
-			   Base.typeData(i.getMatriId(), "AGR75407");
+			   Base.typeData(i.getMatriId(), "AGR100176");
 			   
 			   Base.click(i.getPaswwordclr());
 			   Base.typeData(i.getPassword(), "cbstest");
@@ -174,7 +174,7 @@ public class LatestMatchesScroll extends Base{
 	}
 	   
 	   
-	   @Test (enabled=false)
+	   @Test (enabled=true)
 	   public void relevanceScroll() throws Exception {
 		   
 			
@@ -226,7 +226,7 @@ public class LatestMatchesScroll extends Base{
 
 
    
-	   @Test(enabled=false)
+	   @Test(enabled=true)
 	   public void newestProfile() throws Exception {
 		
 		            SortScroll s = new SortScroll(driver);
@@ -283,7 +283,7 @@ public class LatestMatchesScroll extends Base{
 	   
 	   
 	   
-	   @Test(enabled=false)
+	   @Test(enabled=true)
 	   public void oldestProfile() throws Exception {
 		   
 		    SortScroll s = new SortScroll(driver);

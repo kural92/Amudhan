@@ -459,8 +459,14 @@ public class BussinessFunctions extends ActionDrivers{
 			String date,String month,String year,String martial,String relgion,String denominations,String denominationText,String div_cast,String div_cast_ifOther,String sub_cast,
 			String sub_castifSC,String Sub_cast_IfOther,String mothertongue,String country,String ccode,String mobileno,String loginpwd)throws Exception{
 		
+		
+		try {
+			driver.findElement(By.xpath("//*[@id=\"home-register\"]/div/div[2]/nav/ul/li[2]/a")).click();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	
-	//	selectElementByVisibleText(RegisterPage1.communitsites(driver,properties.getProperty("communitysites_dropdown")),communitysite);
+		selectElementByVisibleText(RegisterPage1.communitsites(driver,properties.getProperty("communitysites_dropdown")),communitysite);
 		selectElementByVisibleText(RegisterPage1.profilecreateBy(driver,properties.getProperty("profilecreatedby_dropdown")),profileby);
 		type(RegisterPage1.name(driver,properties.getProperty("Name")),name);
 		

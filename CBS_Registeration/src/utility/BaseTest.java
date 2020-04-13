@@ -73,7 +73,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 	    	options.addArguments("--disable-notifications");
 	    	//System.setProperty("webdriver.chrome.driver", "C:\\Mohan\\chromedriver_win32\\chromedriver.exe");
 	 		 // driver = new ChromeDriver(options);	
-	 		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CM_Desktop\\lib\\chromedriver.exe");
+	 		 System.setProperty("webdriver.chrome.driver", "G:\\Matrimony\\Amudhan\\CBS\\Driver\\chromedriver.exe");
 			  driver = new ChromeDriver(options);	
 	    }
 	   

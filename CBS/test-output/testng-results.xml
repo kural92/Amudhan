@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108427" started-at="2020-04-06T12:21:06Z" finished-at="2020-04-06T12:22:54Z">
+  <suite name="Default suite" duration-ms="295160" started-at="2020-04-09T12:00:46Z" finished-at="2020-04-09T12:05:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="108427" started-at="2020-04-06T12:21:06Z" finished-at="2020-04-06T12:22:54Z">
-      <class name="com.search.Search">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.search.Search@79ad8b2f]" name="setUp" is-config="true" duration-ms="5878" started-at="2020-04-06T17:51:00Z" finished-at="2020-04-06T17:51:06Z">
+    <test name="Default test" duration-ms="295160" started-at="2020-04-09T12:00:46Z" finished-at="2020-04-09T12:05:42Z">
+      <class name="SprintTask.CityRegistration">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:SprintTask.CityRegistration@197d671]" name="setUp" is-config="true" duration-ms="5816" started-at="2020-04-09T17:30:41Z" finished-at="2020-04-09T17:30:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="regularSearch()[pri:0, instance:com.search.Search@79ad8b2f]" name="regularSearch" duration-ms="108414" started-at="2020-04-06T17:51:06Z" finished-at="2020-04-06T17:52:54Z">
+        <test-method status="PASS" signature="occupationSearch()[pri:0, instance:SprintTask.CityRegistration@197d671]" name="occupationSearch" duration-ms="295150" started-at="2020-04-09T17:30:46Z" finished-at="2020-04-09T17:35:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regularSearch -->
-      </class> <!-- com.search.Search -->
+        </test-method> <!-- occupationSearch -->
+      </class> <!-- SprintTask.CityRegistration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

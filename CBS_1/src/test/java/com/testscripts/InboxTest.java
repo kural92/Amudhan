@@ -29,7 +29,7 @@ public class InboxTest extends Base {
 	
    @BeforeMethod
    public void setUp() {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--disable-notifications");
 	driver = new ChromeDriver(options);
@@ -46,10 +46,10 @@ public class InboxTest extends Base {
 	   driver.manage().window().maximize();
 	   
 	   Base.click(i.getMatriId());
-	   Base.typeData(i.getMatriId(), "EZH710533");
+	   Base.typeData(i.getMatriId(), "AGR100176");
 	   
 	   Base.click(i.getPaswwordclr());
-	   Base.typeData(i.getPassword(), "cbstest1");
+	   Base.typeData(i.getPassword(), "cbstest");
 	   
 	   Base.click(i.getLoginbtn());
 	   

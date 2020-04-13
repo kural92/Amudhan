@@ -28,7 +28,7 @@ public class RegisterTest extends BaseTest{
 			
 	public RegisterTest()throws Exception{
 		properties=new Properties();
-		FileInputStream objectsinput1 = new FileInputStream(new File("C:\\Users\\amuthan\\eclipse-workspace\\CBS_Registeration\\objectRepository\\Registration.properties"));
+		FileInputStream objectsinput1 = new FileInputStream(new File("G:\\Matrimony\\Amudhan\\CBS_Registeration\\objectRepository\\Registration.properties"));
 		properties.load(objectsinput1);
 			}	
 		
@@ -36,10 +36,10 @@ public class RegisterTest extends BaseTest{
 	public static void registerTest() throws Exception{
 	test=extent.createTest("Register Module -Test");
 				
-		FileInputStream file1 = new FileInputStream(new File("C:\\Users\\amuthan\\eclipse-workspace\\CBS_Registeration\\Resources\\RegisterTestData1.xlsx")); 
+		FileInputStream file1 = new FileInputStream(new File("G:\\Matrimony\\Amudhan\\CBS_Registeration\\Resources\\RegisterTestData1.xlsx")); 
 		Workbook workbook1 = WorkbookFactory.create(file1);
 		Sheet sheet1 = workbook1.getSheetAt(0);
-		FileInputStream file2 = new FileInputStream(new File("C:\\Users\\amuthan\\eclipse-workspace\\CBS_Registeration\\Resources\\RegisterTestData2.xlsx")); 
+		FileInputStream file2 = new FileInputStream(new File("G:\\Matrimony\\Amudhan\\CBS_Registeration\\Resources\\RegisterTestData2.xlsx")); 
 		Workbook workbook2 = WorkbookFactory.create(file2);
 		Sheet sheet2 = workbook2.getSheetAt(0);
 		for (int i=3; i<=3; i++) {
@@ -198,7 +198,10 @@ try {
 	        driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
 	       System.out.println("New tab opened");	          
 	       Thread.sleep(9000);	      
-	        driver.navigate().to("https://www.nepalimatrimony.com/cbscheck/smspin.php?MatriId="+matriid);    
+	        driver.navigate().to("https://admin:lRqW6WNT@communitymatrimony.com/api/webservicecall.php?filename=getSmsPin&MatriId="+matriid);    
+	        
+	        //  Nepali -  https://www.nepalimatrimony.com/cbscheck/smspin.php?MatriId="+matriid
+	        
 	        //https://admin:lRqW6WNT@communitymatrimony.com/api/webservicecall.php?filename=getSmsPin&MatriId="+matriid
 	        //driver.navigate().back();
 	        Thread.sleep(5000);

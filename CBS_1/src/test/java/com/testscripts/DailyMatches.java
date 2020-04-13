@@ -48,7 +48,7 @@ public class DailyMatches extends Base {
 		Thread.sleep(3000);
 
 		Base.click(i.getMatriId());
-		Base.typeData(i.getMatriId(), "AGR755407");
+		Base.typeData(i.getMatriId(), "AGR600764");
 
 		Base.click(i.getPaswwordclr());
 		Base.typeData(i.getPassword(), "cbstest");
