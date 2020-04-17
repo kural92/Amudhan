@@ -53,7 +53,7 @@ public class RefineSearch extends BaseTest{
 		driver.get("https://www.communitymatrimony.com");
 		driver.manage().window().maximize();
 		BaseTest.click(g.getMatriID());
-		BaseTest.typeData(g.getMatriID(), "EZH710533");
+		BaseTest.typeData(g.getMatriID(), "AGR102088");
 		BaseTest.click(g.getPasswordClear());
 		BaseTest.typeData(g.getPassword(), "cbstest");
 		BaseTest.click(g.getLogin_btn());

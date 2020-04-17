@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.testscripts.SortScrollTest"/>
+      <class name="com.testscripts.ShortListViewProfile2"/>
+      <class name="com.testscripts.WhoShortlistedBannerTest"/>
+      <class name="com.testscripts.WhoShortListeMeTest"/>
+      <class name="com.testscripts.WhoViewMyMobileNoTest"/>
+      <class name="com.testscripts.ShortListViewProfile"/>
+      <class name="com.testscripts.ViewHoroscopeTest"/>
+      <class name="com.testscripts.ViewProfileRequestTest"/>
+      <class name="com.testscripts.ShortlistedMeScroll"/>
+      <class name="com.testscripts.ProfileViewNotContacted"/>
+      <class name="com.testscripts.ProfileViewNotContactWithDate"/>
+      <class name="com.testscripts.ProfileViewNotContactedWithPhoto"/>
+      <class name="com.testscripts.ShortListTest"/>
+      <class name="com.testscripts.ViewProfileScrollTest"/>
+      <class name="com.testscripts.WhoViewedMyProfileTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="com.testscripts.ViewHoroscopeTest">
+        <methods>
+          <include name="testCase"/>
+        </methods>
+      </class> <!-- com.testscripts.ViewHoroscopeTest -->
+      <class name="com.testscripts.ViewProfileRequestTest">
+        <methods>
+          <include name="viewProfileRequesstTest"/>
+        </methods>
+      </class> <!-- com.testscripts.ViewProfileRequestTest -->
+      <class name="com.testscripts.ViewProfileScrollTest">
+        <methods>
+          <include name="viewProfilescrolllTest"/>
+        </methods>
+      </class> <!-- com.testscripts.ViewProfileScrollTest -->
+      <class name="com.testscripts.SortScrollTest">
+        <methods>
+          <include name="htmlReport"/>
+          <include name="sortTest"/>
+        </methods>
+      </class> <!-- com.testscripts.SortScrollTest -->
+      <class name="com.testscripts.WhoShortListeMeTest">
+        <methods>
+          <include name="whoShortListedMe"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- com.testscripts.WhoShortListeMeTest -->
+      <class name="com.testscripts.ShortListTest">
+        <methods>
+          <include name="shortlistLatestMatches"/>
+          <include name="shortlistMLFM"/>
+          <include name="shortlistYTBW"/>
+          <include name="setUp"/>
+          <include name="shortlistPremium_matches"/>
+        </methods>
+      </class> <!-- com.testscripts.ShortListTest -->
+      <class name="com.testscripts.ShortListViewProfile2">
+        <methods>
+          <include name="shortList"/>
+        </methods>
+      </class> <!-- com.testscripts.ShortListViewProfile2 -->
+      <class name="com.testscripts.ShortlistedMeScroll">
+        <methods>
+          <include name="startUp"/>
+          <include name="whoShortlistedMeScrollTest"/>
+        </methods>
+      </class> <!-- com.testscripts.ShortlistedMeScroll -->
+      <class name="com.testscripts.WhoViewMyMobileNoTest">
+        <methods>
+          <include name="whoShortListedMe"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- com.testscripts.WhoViewMyMobileNoTest -->
+      <class name="com.testscripts.ProfileViewNotContactWithDate">
+        <methods>
+          <include name="startUp"/>
+          <include name="profileViewNotContactedTest"/>
+        </methods>
+      </class> <!-- com.testscripts.ProfileViewNotContactWithDate -->
+      <class name="com.testscripts.ProfileViewNotContactedWithPhoto">
+        <methods>
+          <include name="startUp"/>
+          <include name="profileViewNotContactedTest"/>
+        </methods>
+      </class> <!-- com.testscripts.ProfileViewNotContactedWithPhoto -->
+      <class name="com.testscripts.ProfileViewNotContacted">
+        <methods>
+          <include name="startUp"/>
+          <include name="profileViewCreated"/>
+        </methods>
+      </class> <!-- com.testscripts.ProfileViewNotContacted -->
+      <class name="com.testscripts.WhoShortlistedBannerTest">
+        <methods>
+          <include name="shortlistViewProfileTest"/>
+        </methods>
+      </class> <!-- com.testscripts.WhoShortlistedBannerTest -->
+      <class name="com.testscripts.ShortListViewProfile">
+        <methods>
+          <include name="shortList"/>
+        </methods>
+      </class> <!-- com.testscripts.ShortListViewProfile -->
+      <class name="com.testscripts.WhoViewedMyProfileTest">
+        <methods>
+          <include name="whoViewedMeScrollTest"/>
+        </methods>
+      </class> <!-- com.testscripts.WhoViewedMyProfileTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

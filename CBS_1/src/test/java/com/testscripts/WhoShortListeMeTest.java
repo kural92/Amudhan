@@ -28,7 +28,7 @@ public class WhoShortListeMeTest extends Base {
 	public void startUp() {
 
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -49,7 +49,7 @@ public class WhoShortListeMeTest extends Base {
 		
 		
 		Base.click(w.getMatriId());
-		Base.typeData(w.getMatriId(), "EZH710533");
+		Base.typeData(w.getMatriId(), "AGR102088");
 		Thread.sleep(2000);
 		
 	   Base.click(w.getPaswwordclr());
@@ -57,7 +57,7 @@ public class WhoShortListeMeTest extends Base {
 		Thread.sleep(2000);
 		
 	//	Base.click(s.getPassword());
-		Base.typeData(w.getPassword(), "cbstest1");
+		Base.typeData(w.getPassword(), "cbstest");
 		Thread.sleep(2000);
 		
 		Base.click(w.getLoginbtn());

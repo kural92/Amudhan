@@ -41,7 +41,7 @@ public class LatestMatchesScroll extends Base{
 			   driver.manage().window().maximize();
 			   
 			   Base.click(i.getMatriId());
-			   Base.typeData(i.getMatriId(), "AGR100176");
+			   Base.typeData(i.getMatriId(), "AGR102088");
 			   
 			   Base.click(i.getPaswwordclr());
 			   Base.typeData(i.getPassword(), "cbstest");

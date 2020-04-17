@@ -25,7 +25,7 @@ public class ShortlistedMeScroll extends Base {
 	@BeforeTest
 	public void startUp() {
 		
-		  System.setProperty("webdriver.chrome.drover", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.drover", ".//Driver//chromedriver.exe");
          ChromeOptions options = new ChromeOptions();
          options.addArguments("--disable-notifications");
          driver = new ChromeDriver(options);
@@ -46,10 +46,10 @@ public class ShortlistedMeScroll extends Base {
 		driver.manage().window().maximize();
 		
 		Base.click(i.getMatriId());
-		Base.typeData(i.getMatriId(), "EZH710533");
+		Base.typeData(i.getMatriId(), "AGR102088");
 		
 		Base.click(i.getPaswwordclr());
-		Base.typeData(i.getPassword(), "cbstest1");
+		Base.typeData(i.getPassword(), "cbstest");
 		Thread.sleep(1000);
 		
 		Base.click(i.getLoginbtn());

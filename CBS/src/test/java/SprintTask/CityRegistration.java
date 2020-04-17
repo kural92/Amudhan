@@ -64,7 +64,7 @@ public class CityRegistration extends BaseTest{
 	
 	Thread.sleep(2000);
 	//driver.findElement(By.id("gendermale")).click();
-	acc.moveToElement(driver.findElement(By.id("genderfemale"))).click().build().perform();
+	acc.moveToElement(driver.findElement(By.id("gendermale"))).click().build().perform();
 	
 	
 	
@@ -101,7 +101,7 @@ public class CityRegistration extends BaseTest{
 	
 	Thread.sleep(3000);
 	try {
-		BaseTest.select_index(driver.findElement(By.id("caste")), 3);
+		BaseTest.select_index(driver.findElement(By.id("caste")), 20);
 		Thread.sleep(2000);
 		WebElement Caste_aa = driver.findElement(By.id("caste"));
 		Select aa = new Select(Caste_aa);
@@ -117,7 +117,7 @@ public class CityRegistration extends BaseTest{
 	
 	Thread.sleep(3000);
 	try {
-		BaseTest.select_index(driver.findElement(By.id("subCaste")), 2);
+		BaseTest.select_index(driver.findElement(By.id("subCaste")), 1);
 		Thread.sleep(2000);
 		WebElement subCaste_aa = driver.findElement(By.id("subCaste"));
 		Select aa = new Select(subCaste_aa);
@@ -136,12 +136,11 @@ public class CityRegistration extends BaseTest{
 	 System.out.println(moth_tng);
 
 	
-	Thread.sleep(3000);
-	try {
-		BaseTest.select_index(driver.findElement(By.id("religion")), 2);
-	} catch (Exception e) {
-		// TODO: handle exception
-	}
+		/*
+		 * Thread.sleep(3000); try {
+		 * BaseTest.select_index(driver.findElement(By.id("religion")), 2); } catch
+		 * (Exception e) { // TODO: handle exception }
+		 */
 	
 	Thread.sleep(3000);
 	try {
@@ -165,7 +164,7 @@ public class CityRegistration extends BaseTest{
 	
 	
 	Thread.sleep(5000);
-	driver.findElement(By.id("email")).sendKeys("amukural"+Math.random()*123+"@gmail.com");
+	driver.findElement(By.id("email")).sendKeys("amukural"+Math.random()*1+"@gmail.com");
 	
 	Thread.sleep(3000);
 	BaseTest.select_index(driver.findElement(By.id("heightFeet")), 20);
@@ -206,7 +205,7 @@ public class CityRegistration extends BaseTest{
 		// TODO: handle exception
 	}
 
-	/*  String Dosham = BaseTest.getExcelData("Registeration", 1, 20);
+	try {  String Dosham = BaseTest.getExcelData("Registeration", 1, 20);
 	  Thread.sleep(3000); 
 	  if (Dosham.contains("Yes")) {
 	  driver.findElement(By.xpath("//*[@id=\"manglikdisplay\"]/dl[2]/dd/label[1]")).click();
@@ -218,8 +217,10 @@ public class CityRegistration extends BaseTest{
 	  }else{
 		  driver.findElement(By.xpath("//*[@id=\"manglikdisplay\"]/dl[2]/dd/label[3]")).click(); 
 		  }
-	*/
 	
+	} catch (Exception e) {
+		// TODO: handle exception
+	}
 	
 	Thread.sleep(3000);
 	BaseTest.select_text(driver.findElement(By.id("educationCategory")), "IPS");
@@ -261,7 +262,7 @@ public class CityRegistration extends BaseTest{
 				WebElement element1 = driver.findElement(By.xpath("//div[contains(text(),'Your Matrimony ID:')]"));
 		        String text = element1.getText();
 		        System.out.println(text);
-		         String matriid = text.substring(19,28);
+		         String matriid = text.substring(19,29);
 		        System.out.println("Newly Registered Matri ID is - : "+matriid);
 		      //  test.info("Newly Registered Matri ID is - : "+matriid);
 			//	}
@@ -331,21 +332,32 @@ public class CityRegistration extends BaseTest{
 		        driver.findElement(By.id("reason3")).click();
 		        Thread.sleep(2000);
 		        driver.findElement(By.id("skipphotoclick")).click();
-		        
-		        
-		        Thread.sleep(5000);
-		        driver.navigate().to("https://www.agarwalmatrimony.com/profiledetail/index.php?act=fullprofilenew&id="+matriid);
-		        ///////////////////////////////
-	        Thread.sleep(5000);
-		   //    driver.findElement(By.id("partnerFoodChoice4")).click();
-		        Thread.sleep(2000);
-		   //    driver.findElement(By.id("save_addpp")).click();
 		} 
-		        catch (Exception e) {
-					// TODO: handle exception
-				}
+        catch (Exception e) {
+			// TODO: handle exception
+		}        
+		        
+		     //   Thread.sleep(5000);
+		    //    driver.navigate().to("https://www.agarwalmatrimony.com/profiledetail/index.php?act=fullprofilenew&id="+matriid);
+		  try {      Thread.sleep(2000);
+          driver.findElement(By.xpath("//a[contains(text(),'Skip to Home')]")).click();
+
+          Thread.sleep(2000);
+          driver.findElement(By.xpath("//a[contains(text(),'do this later')]")).click();
+	  } catch (Exception e) {
+		// TODO: handle exception
+	}
+		///////////////////////////////
+	    try {
+		Thread.sleep(5000);
+		       driver.findElement(By.id("partnerFoodChoice4")).click();
+		        Thread.sleep(2000);
+		       driver.findElement(By.id("save_addpp")).click();
+	    } catch (Exception e) {
+			// TODO: handle exception
+		}
 	/////////////////////////////////////////////////////////////////
-		/*		  try {      Thread.sleep(2000);
+				  try {      Thread.sleep(2000);
                 driver.findElement(By.xpath("//a[contains(text(),'Skip to Home')]")).click();
 	
                 Thread.sleep(2000);
@@ -484,6 +496,6 @@ public class CityRegistration extends BaseTest{
 		}
                 
 	
-*/
+
 		}
 	}

@@ -52,7 +52,7 @@ public class PaymentBanner extends Base {
 		try {
 
 			Base.click(i.getMatriId());
-			Base.typeData(i.getMatriId(), "AGR755407");
+			Base.typeData(i.getMatriId(), "AGR102088");
 			Thread.sleep(1000);
 
 			Base.click(i.getPaswwordclr());

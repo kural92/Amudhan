@@ -778,6 +778,36 @@ public class RefineSearch_POM extends BaseTest {
 	}
 	
 	
+	///////////////////////////////////////////////////////////////////////
+	
+	
+	@FindBy(id="total_div")
+	private WebElement Refine_Result_Count;
+	public WebElement getRefine_Result_Count() {
+		return Refine_Result_Count;
+	}
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'EZH')]")
+	private WebElement Refine_Result_MatriId;
+	public WebElement getRefine_Result_MatriId() {
+		return Refine_Result_MatriId;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

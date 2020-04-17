@@ -52,10 +52,10 @@ public class MyHomeMatchesCountTest extends Base{
 		 
 		 Thread.sleep(1000);
 		 Base.click(i.getMatriId());
-		 Base.typeData(i.getMatriId(), "AGR755407");
+		 Base.typeData(i.getMatriId(), "AGR102088");
 		 
 		 Base.click(i.getPaswwordclr());
-		 Base.typeData(i.getPassword(), "cbstest1");
+		 Base.typeData(i.getPassword(), "cbstest");
 		 
 		 Base.click(i.getLoginbtn());
 		 Thread.sleep(2000);

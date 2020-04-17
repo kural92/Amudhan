@@ -34,7 +34,7 @@ public class WhoViewedMyProfileTest extends Base{
 	@BeforeTest
 	public void startUp() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options  = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -54,7 +54,7 @@ try {
 		Thread.sleep(3000);
 		
 		Base.click(i.getMatriId());
-		Base.typeData(i.getMatriId(), "EZH710533");
+		Base.typeData(i.getMatriId(), "AGR102088");
 		
 		Base.click(i.getPaswwordclr());
 		Base.typeData(i.getPassword(), "cbstest");
@@ -321,10 +321,10 @@ try {
 		Thread.sleep(3000);
 		
 		Base.click(i.getMatriId());
-		Base.typeData(i.getMatriId(), "BRH1393126");
+		Base.typeData(i.getMatriId(), "AGR102088");
 		
 		Base.click(i.getPaswwordclr());
-		Base.typeData(i.getPassword(), "test4cbs");
+		Base.typeData(i.getPassword(), "cbstest");
 		
 		Base.click(i.getLoginbtn());
 		System.out.println("Log In was Successfull");

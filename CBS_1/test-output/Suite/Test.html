@@ -1,0 +1,383 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/18</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 15 17:54:07 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>37 seconds (37207 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.startUp()'><b>startUp</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from chrome not reachable
+  (Session info: chrome=80.0.3987.163)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14.83 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GILI3G4&apos;, ip: &apos;10.0.0.54&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at com.testscripts.ShortlistedMeScroll.startUp(ShortlistedMeScroll.java:31)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace648315947", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace648315947'><pre>org.openqa.selenium.SessionNotCreatedException: session not created
+from chrome not reachable
+  (Session info: chrome=80.0.3987.163)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14.83 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-GILI3G4&apos;, ip: &apos;10.0.0.54&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at com.testscripts.ShortlistedMeScroll.startUp(ShortlistedMeScroll.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.startUp()'><b>startUp</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.startUp()'><b>startUp</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.SortScrollTest.setUp()'><b>setUp</b><br>Test class: com.testscripts.SortScrollTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.SortScrollTest@3c72f59f</td></tr>
+<tr>
+<td title='com.testscripts.ShortListViewProfile2.setUp()'><b>setUp</b><br>Test class: com.testscripts.ShortListViewProfile2</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListViewProfile2@4c1d9d4b</td></tr>
+<tr>
+<td title='com.testscripts.ShortListViewProfile.setUp()'><b>setUp</b><br>Test class: com.testscripts.ShortListViewProfile</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListViewProfile@7b227d8d</td></tr>
+<tr>
+<td title='com.testscripts.ViewHoroscopeTest.setUp()'><b>setUp</b><br>Test class: com.testscripts.ViewHoroscopeTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewHoroscopeTest@7219ec67</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortList()'><b>shortList</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortList()'><b>shortList</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortList()'><b>shortList</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortList()'><b>shortList</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.ViewProfileRequestTest.setUp()'><b>setUp</b><br>Test class: com.testscripts.ViewProfileRequestTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewProfileRequestTest@45018215</td></tr>
+<tr>
+<td title='com.testscripts.ViewProfileScrollTest.setUp()'><b>setUp</b><br>Test class: com.testscripts.ViewProfileScrollTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewProfileScrollTest@65d6b83b</td></tr>
+<tr>
+<td title='com.testscripts.ViewHoroscopeTest.teatDown()'><b>teatDown</b><br>Test class: com.testscripts.ViewHoroscopeTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewHoroscopeTest@7219ec67</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.tearDown()'><b>tearDown</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.tearDown()'><b>tearDown</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.teardown()'><b>teardown</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.tearDown()'><b>tearDown</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.tearDown()'><b>tearDown</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.tearDown()'><b>tearDown</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.mail()'><b>mail</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContacted.profileViewCreated()'><b>profileViewCreated</b><br>Test class: com.testscripts.ProfileViewNotContacted</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ProfileViewNotContacted@3b07a0d6</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactWithDate.profileViewNotContactedTest()'><b>profileViewNotContactedTest</b><br>Test class: com.testscripts.ProfileViewNotContactWithDate</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ProfileViewNotContactWithDate@11a9e7c8</td></tr>
+<tr>
+<td title='com.testscripts.ProfileViewNotContactedWithPhoto.profileViewNotContactedTest()'><b>profileViewNotContactedTest</b><br>Test class: com.testscripts.ProfileViewNotContactedWithPhoto</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ProfileViewNotContactedWithPhoto@3901d134</td></tr>
+<tr>
+<td title='com.testscripts.ShortListViewProfile2.shortList()'><b>shortList</b><br>Test class: com.testscripts.ShortListViewProfile2</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListViewProfile2@4c1d9d4b</td></tr>
+<tr>
+<td title='com.testscripts.ShortListViewProfile.shortList()'><b>shortList</b><br>Test class: com.testscripts.ShortListViewProfile</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListViewProfile@7b227d8d</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortlistLatestMatches()'><b>shortlistLatestMatches</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortlistMLFM()'><b>shortlistMLFM</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortlistPremium_matches()'><b>shortlistPremium_matches</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.WhoShortlistedBannerTest.shortlistViewProfileTest()'><b>shortlistViewProfileTest</b><br>Test class: com.testscripts.WhoShortlistedBannerTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.WhoShortlistedBannerTest@16e7dcfd</td></tr>
+<tr>
+<td title='com.testscripts.ShortListTest.shortlistYTBW()'><b>shortlistYTBW</b><br>Test class: com.testscripts.ShortListTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortListTest@14d3bc22</td></tr>
+<tr>
+<td title='com.testscripts.SortScrollTest.sortTest()'><b>sortTest</b><br>Test class: com.testscripts.SortScrollTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.SortScrollTest@3c72f59f</td></tr>
+<tr>
+<td title='com.testscripts.ViewHoroscopeTest.testCase()'><b>testCase</b><br>Test class: com.testscripts.ViewHoroscopeTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewHoroscopeTest@7219ec67</td></tr>
+<tr>
+<td title='com.testscripts.ViewProfileRequestTest.viewProfileRequesstTest()'><b>viewProfileRequesstTest</b><br>Test class: com.testscripts.ViewProfileRequestTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewProfileRequestTest@45018215</td></tr>
+<tr>
+<td title='com.testscripts.ViewProfileScrollTest.viewProfilescrolllTest()'><b>viewProfilescrolllTest</b><br>Test class: com.testscripts.ViewProfileScrollTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ViewProfileScrollTest@65d6b83b</td></tr>
+<tr>
+<td title='com.testscripts.WhoShortListeMeTest.whoShortListedMe()'><b>whoShortListedMe</b><br>Test class: com.testscripts.WhoShortListeMeTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.WhoShortListeMeTest@60dcc9fe</td></tr>
+<tr>
+<td title='com.testscripts.WhoViewMyMobileNoTest.whoShortListedMe()'><b>whoShortListedMe</b><br>Test class: com.testscripts.WhoViewMyMobileNoTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.WhoViewMyMobileNoTest@ec756bd</td></tr>
+<tr>
+<td title='com.testscripts.ShortlistedMeScroll.whoShortlistedMeScrollTest()'><b>whoShortlistedMeScrollTest</b><br>Test class: com.testscripts.ShortlistedMeScroll</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.ShortlistedMeScroll@3d121db3</td></tr>
+<tr>
+<td title='com.testscripts.WhoViewedMyProfileTest.whoViewedMeScrollTest()'><b>whoViewedMeScrollTest</b><br>Test class: com.testscripts.WhoViewedMyProfileTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.WhoViewedMyProfileTest@12d4bf7e</td></tr>
+</table><p>
+</body>
+</html>

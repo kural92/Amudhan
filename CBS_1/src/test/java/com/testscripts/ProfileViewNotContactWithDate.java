@@ -26,7 +26,7 @@ public class ProfileViewNotContactWithDate {
 	@BeforeTest
 	public void startUp() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS_1\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
         driver = new ChromeDriver(options);
@@ -47,11 +47,11 @@ public class ProfileViewNotContactWithDate {
 		Thread.sleep(3000);
 		
 		Base.clear(i.getMatriId());
-		Base.typeData(i.getMatriId(), "Ezh710533");
+		Base.typeData(i.getMatriId(), "AGR102088");
 		Thread.sleep(3000);
 		
 		Base.click(i.getPaswwordclr());
-		Base.typeData(i.getPassword(), "cbstest1");
+		Base.typeData(i.getPassword(), "cbstest");
 		Thread.sleep(3000);
 		
 		Base.click(i.getLoginbtn());

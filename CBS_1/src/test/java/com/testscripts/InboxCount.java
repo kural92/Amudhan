@@ -46,7 +46,7 @@ public class InboxCount extends Base {
 		driver.manage().window().maximize();
 try {
 		Base.click(i.getMatriId());
-		Base.typeData(i.getMatriId(), "AGR755407");
+		Base.typeData(i.getMatriId(), "AGR102088");
 
 		Base.click(i.getPaswwordclr());
 		Base.typeData(i.getPassword(), "cbstest");

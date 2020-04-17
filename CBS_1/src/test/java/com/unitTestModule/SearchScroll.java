@@ -54,7 +54,7 @@ public class SearchScroll extends Base{
 		   System.out.println("Browser Launched successfully");
 		   
 		   Base.click(i.getMatriId());
-		   Base.typeData(s.getMatriId(), "AGR600764");
+		   Base.typeData(s.getMatriId(), "AGR102088");
 		   Thread.sleep(2000);
 		   
 		   Base.click(i.getPaswwordclr());
