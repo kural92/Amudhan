@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import com.pages.EditPIMethod;
 import com.pages.RefineSearchMethod;
+import com.pages.RefineValidationMethod;
 
 import base.BaseTest;
 import pom.cmlogin.EditPI_POM;
@@ -29,8 +30,8 @@ public class RefineSearchValidation extends BaseTest {
 
 	//public static int VP_Age;
 	
-	private static int VP_Age = 0;
-
+	public static int VP_Age = 0;
+	public static int VP_Height;
 	@BeforeSuite
 	public void setUp() {
 		// test=reports.startTest("Divorcee Negative Payment");
@@ -99,10 +100,22 @@ public class RefineSearchValidation extends BaseTest {
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 		RefineSearchMethod.refineAge();
 	
-		String Refine_AgeFrom = BaseTest.getExcelData("RefineSearch", 1, 2);
-		int Age_From = Integer.parseInt(Refine_AgeFrom);
-		String Refine_AgeTo = BaseTest.getExcelData("RefineSearch", 1, 3);
-		int Age_To = Integer.parseInt(Refine_AgeTo);
+	//	RefineValidationMethod.refineAgeValidation();
+	
+	/////////////////////////////////////////////////////////////////////////
+		
+	//	RefineSearchMethod.refineHeight();
+		
+	//	RefineValidationMethod.refineHeightValidation();
+		
+	/////////////////////////////////////////////////////////////////////////////////
+		
+		
+		RefineSearchMethod.refineMaritalStatus();
+		
+		
+		String Marital_Status = BaseTest.getExcelData("RefineSearch", 1, 6);
+		
 		
 		Thread.sleep(3000);
 		
@@ -122,7 +135,7 @@ public class RefineSearchValidation extends BaseTest {
 		} catch (Exception e) {
 			
 		}
-		//
+		Thread.sleep(2000);
 		BaseTest.click(Refine_Profile.get(j));
 		
 		Thread.sleep(2000);
@@ -149,22 +162,17 @@ catch (Exception e) {
 	// TODO: handle exception
 }
 /////////////////////////////////////////////
-			String Refine_Result_Age = v.getVP_Age().getText();
-			System.out.println("Age : "+ Refine_Result_Age);
+			String Refine_Result_MaritalStatus = v.getVP_Marital_Status().getText();
+			System.out.println("Height : "+ Refine_Result_MaritalStatus);
 			
 			Thread.sleep(2000);
-			if (Refine_Result_Age.contains("yrs")) {
-				String[] Age_spl = Refine_Result_Age.split("yrs");
-				String Age_spli = Age_spl[0].toString().trim();
-				  VP_Age = Integer.parseInt(Age_spli);
-				System.out.println("Result Age : "+ VP_Age);				
-			}
+			
 	////////////////			
 		Thread.sleep(2000);
-		if (Age_From==VP_Age ||  Age_To>VP_Age) {
-			System.out.println(VP_Age +" Matches with the refine search result Age between : " +Age_From+" and "+ Age_To );
+		if (Marital_Status.contains(Refine_Result_MaritalStatus)) {
+			System.out.println(Refine_Result_MaritalStatus +" Matches with the refine search result : " +Marital_Status);
 		}else {
-			System.err.println(VP_Age +" not Matches with the refine search result Age between : " +Age_From+" and "+ Age_To );
+			System.err.println(Refine_Result_MaritalStatus +" not Matches with the refine search result : " +Marital_Status);
 		}
 	//////////////////////////////
 		try {
@@ -187,8 +195,12 @@ catch (Exception e) {
 		
 		
 	}
-	
-	
+		
+		
+		
+		
+		
+		
 	}
 	
 }

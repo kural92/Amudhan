@@ -147,7 +147,7 @@ public class RefineSearchMethod extends BaseTest{
 	/////////////////////////		
 		if(Marital_Status.contains("Separated")) {
 			if (!rs.getRefine_marital_Seperated().isSelected()) {
-				BaseTest.click(rs.getRefine_marital_Unmarried());
+				BaseTest.click(rs.getRefine_marital_Seperated());
 			} else {
 	             System.out.println("Separated was Already Selected");
 			}	}
