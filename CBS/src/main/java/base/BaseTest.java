@@ -147,13 +147,13 @@ public static void setExcelData(String sheetName, int rowNum, int colNum,String 
 
 
 public static void setExcelDataUrl(String sheetName, int rowNum, int colNum,String data) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\LoginTestData_Mohan2222.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
  Row row = sh.getRow(rowNum);
  Cell cel = row.createCell(colNum);
  cel.setCellValue(data);
- FileOutputStream fos = new FileOutputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\LoginTestData_Mohan2222.xlsx");
+ FileOutputStream fos = new FileOutputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
 	wb.write(fos);
 	wb.close();
 }
@@ -161,20 +161,20 @@ public static void setExcelDataUrl(String sheetName, int rowNum, int colNum,Stri
 
 
 public static int getRowCount(String sheetName) throws Throwable {
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  int rowIndex = wb.getSheet(sheetName).getLastRowNum();
  return rowIndex;
 }
 
 public static void setExcelDataInteg(String sheetName, int rowNum, int colNum,int data) throws Throwable{
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
  Row row = sh.getRow(rowNum);
  Cell cel = row.createCell(colNum);
  cel.setCellValue(data);
- FileOutputStream fos = new FileOutputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+ FileOutputStream fos = new FileOutputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
 	wb.write(fos);
 	wb.close();
 
@@ -182,7 +182,7 @@ public static void setExcelDataInteg(String sheetName, int rowNum, int colNum,in
 
 
 public static int getCellCount(String sheetName) throws Throwable {
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Excel\\SMSTEST.xlsx");
+	FileInputStream fis = new FileInputStream("G:\\Matrimony\\Amudhan\\CBS\\Excel\\SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
 Sheet sh = wb.getSheet(sheetName);
 Row row = sh.getRow(0);
