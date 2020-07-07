@@ -252,7 +252,7 @@ public class CityRegistration extends BaseTest{
 	BaseTest.select_text(driver.findElement(By.id("country")), getExcelData("Registeration", 1, 8));
 	
 	Thread.sleep(3000);
-	driver.findElement(By.id("mobileNo")).sendKeys("7777877777");
+	driver.findElement(By.id("mobileNo")).sendKeys("7277877777");
 	
 	Thread.sleep(3000);
 	driver.findElement(By.id("password")).sendKeys("cbstest");
@@ -449,7 +449,7 @@ public class CityRegistration extends BaseTest{
 		        
 		     //   Thread.sleep(5000);
 		    //    driver.navigate().to("https://www.agarwalmatrimony.com/profiledetail/index.php?act=fullprofilenew&id="+matriid);
-		  try {      Thread.sleep(2000);
+	/*	  try {      Thread.sleep(2000);
 		  
 		  Thread.sleep(3000);
  	   			int CommonDivision_Count = BaseTest.getRowCount("Common Division");
@@ -558,8 +558,18 @@ public class CityRegistration extends BaseTest{
 		       driver.findElement(By.id("save_addpp")).click();
 	    } catch (Exception e) {
 			// TODO: handle exception
-		}
+		} */
 	/////////////////////////////////////////////////////////////////
+		
+		  try {      Thread.sleep(2000);
+          driver.findElement(By.xpath("//a[contains(text(),'Skip to Home')]")).click();
+
+          Thread.sleep(2000);
+          driver.findElement(By.xpath("//a[contains(text(),'do this later')]")).click();
+	  } catch (Exception e) {
+		// TODO: handle exception
+	}
+		  
 				  try {      Thread.sleep(2000);
                 driver.findElement(By.xpath("//a[contains(text(),'Skip to Home')]")).click();
 	
@@ -577,6 +587,7 @@ public class CityRegistration extends BaseTest{
      }catch (Exception e) {
 		// TODO: handle exception
 	}
+	
          ////////////////////////////////////////////
      		try {        Thread.sleep(3000);
      		        driver.findElement(By.xpath("//a[contains(text(),'skip »')]")).click();

@@ -1,6 +1,7 @@
 package com.search;
 
 import java.awt.Robot;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -48,8 +49,8 @@ public class Search extends BaseTest {
 
 		driver.get("https://www.communitymatrimony.com");
 		driver.manage().window().maximize();
-		BaseTest.click(g.getMatriID());
-		BaseTest.typeData(g.getMatriID(), "AGR102088");
+		BaseTest.click(g.getMatriID());// AGR102088
+		BaseTest.typeData(g.getMatriID(), "AGR404110");
 		BaseTest.click(g.getPasswordClear());
 		BaseTest.typeData(g.getPassword(), "cbstest");
 		BaseTest.click(g.getLogin_btn());
@@ -74,21 +75,93 @@ public class Search extends BaseTest {
 			// TODO: handle exception
 		}
 
+		try {
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//*[@id=\"strategicComm\"]/div/div[2]/a/img")).click();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		Thread.sleep(5000);
 		try {
 			BaseTest.click(driver.findElement(By.xpath("//*[@id=\"special_offer_lightpic1\"]/div[1]/div/a/img")));
 		} catch (Exception e2) {
 			// TODO: handle exception
 		}
-
-		Search_POM s = new Search_POM(driver);
-
-		try { SearchMethod.regularSearch(); } catch (Exception e) {	}
+		Thread.sleep(5000);
+		//driver.findElement(By.xpath("(//a[contains(text(),'Search')])[1]")).click();
+		
+		Thread.sleep(10000); //BaseTest.click(s.getSearch_Menu_btn());
+		  
+		
+	///	 driver.findElement((By.xpath("//*[@id=\"topnav-login-menu\"]/div[2]/div[4]/a")).click();
+		Search_POM s = new Search_POM(driver);//
+        
+       // driver.findElement((By.xpath("//*[@id=\"topnav-login-menu\"]/div[2]/div[4]/a")).click();
+        //	try { SearchMethod.regularSearch(); } catch (Exception e) {	}
 		try { SearchMethod.advancedSearch(); } catch (Exception e) {	}
-		try { SearchMethod.keyWordSearch(); } catch (Exception e) {	}
-		try { SearchMethod.searchById(); } catch (Exception e) {	}
+	//	try { SearchMethod.keyWordSearch(); } catch (Exception e) {	}
+	//	try { SearchMethod.searchById(); } catch (Exception e) {	}
 		/////////////////////////////////////////////
 
+		Thread.sleep(5000);
+		String Total = driver.findElement(By.id("total_div")).getText();
+		int a = Integer.parseInt(Total);
+		
+		int b = ((a/10));
+		
+		int c = (int) Math.ceil(b);
+		
+		
+		for (int j = 1; j <=c; j++) {
+			Thread.sleep(5000);
+			String parent = driver.getWindowHandle();
+			for (int j2 = 0; j2 <=9; j2++) {
+				Thread.sleep(5000);
+				driver.findElement(By.id("ignorecrossbefore_"+j2+"")).click();
+				
+				Thread.sleep(2000);
+				Set<String> child = driver.getWindowHandles();
+				
+				for (String handle : child) {
+					if (!parent.contains(handle)) {
+						Thread.sleep(2000);
+						driver.switchTo().window(handle);
+					}
+				}
+				
+				//
+				Thread.sleep(5000);
+				
+				String habit = driver.findElement(By.xpath("(//span[contains(text(),'Eating Habits')]//following::span[2])[1]")).getText();
+				//System.out.println("Eating Habits are : "+ habit);
+				
+				Thread.sleep(2000);
+				if (habit.contains("Vegetarian")) {
+					System.out.println("Eating Habit was "+ habit);
+				} else {
+					System.err.println("Eating Habit was "+habit);
+				}
+				
+				Thread.sleep(2000);
+				driver.close();
+				
+				Thread.sleep(2000);
+				driver.switchTo().window(parent);
+				
+				
+			}
+		
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//span[contains(text(),'Next ')]")).click();
+			
+			Thread.sleep(5000);
+			
+		}
+		
+		
+		
+		
 	   
 			       
 	}

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2482654" started-at="2020-04-23T04:30:05Z" finished-at="2020-04-23T05:11:27Z">
+  <suite name="Default suite" duration-ms="128343" started-at="2020-07-06T13:47:36Z" finished-at="2020-07-06T13:49:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2482654" started-at="2020-04-23T04:30:05Z" finished-at="2020-04-23T05:11:27Z">
-      <class name="SprintTask.CityRegistration">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:SprintTask.CityRegistration@79ad8b2f]" name="setUp" is-config="true" duration-ms="5697" started-at="2020-04-23T09:59:59Z" finished-at="2020-04-23T10:00:05Z">
+    <test name="Default test" duration-ms="128343" started-at="2020-07-06T13:47:36Z" finished-at="2020-07-06T13:49:45Z">
+      <class name="com.search.Search">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.search.Search@79ad8b2f]" name="setUp" is-config="true" duration-ms="6194" started-at="2020-07-06T19:17:30Z" finished-at="2020-07-06T19:17:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="occupationSearch()[pri:0, instance:SprintTask.CityRegistration@79ad8b2f]" name="occupationSearch" duration-ms="2482642" started-at="2020-04-23T10:00:05Z" finished-at="2020-04-23T10:41:27Z">
+        <test-method status="PASS" signature="regularSearch()[pri:0, instance:com.search.Search@79ad8b2f]" name="regularSearch" duration-ms="128328" started-at="2020-07-06T19:17:36Z" finished-at="2020-07-06T19:19:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- occupationSearch -->
-      </class> <!-- SprintTask.CityRegistration -->
+        </test-method> <!-- regularSearch -->
+      </class> <!-- com.search.Search -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

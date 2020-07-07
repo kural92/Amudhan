@@ -266,20 +266,18 @@ if (SubCaste.contains(", ")) {
 
 		/////////////////////////////////////////////
 
-		Thread.sleep(2000);
-		BaseTest.click(s.getSearch_Menu_btn());
-
-		try {
-			Thread.sleep(5000);
-			acc.moveToElement(driver.findElement(By.xpath("//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[2]"))).build()
-					.perform();
-			driver.findElement(By.id("chatbuddylistwin")).click();
-			acc.moveToElement(driver.findElement(By.xpath("//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[2]"))).click()
-					.build().perform();
-			;
-		} catch (Exception e) {
-
-		}
+		/*
+		 * Thread.sleep(2000); BaseTest.click(s.getSearch_Menu_btn());
+		 */ 
+		  try { Thread.sleep(5000); acc.moveToElement(driver.findElement(By.xpath(
+		  "//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[2]"))).build() .perform();
+		  Thread.sleep(5000); driver.findElement(By.id("chatbuddylistwin")).click();
+		  Thread.sleep(5000); acc.moveToElement(driver.findElement(By.xpath(
+		  "//*[@id=\"RSearchForm\"]/div[2]/div[1]/a[2]"))).click() .build().perform();
+		   } catch (Exception e) {
+		  
+		  }
+		 
 
 		Thread.sleep(2000);
 
@@ -302,6 +300,7 @@ if (SubCaste.contains(", ")) {
 
 		} else {
 		}
+		Thread.sleep(2000);
 		if (BaseTest.getExcelData("Advanced Search", 1, 5).contains("Widow / Widower")) {
 			if (!s.getAdvanced_Marital_Widow().isSelected()) {
 				BaseTest.click(s.getAdvanced_Marital_Widow());
@@ -311,6 +310,7 @@ if (SubCaste.contains(", ")) {
 
 		} else {
 		}
+		Thread.sleep(2000);
 		if (BaseTest.getExcelData("Regular Search", 1, 5).contains("Divorced")) {
 			if (!s.getAdvanced_Marital_Divorceed().isSelected()) {
 				BaseTest.click(s.getAdvanced_Marital_Divorceed());
@@ -320,6 +320,7 @@ if (SubCaste.contains(", ")) {
 
 		} else {
 		}
+		Thread.sleep(2000);
 		if (BaseTest.getExcelData("Advanced Search", 1, 5).contains("Separated")) {
 			if (!s.getAdvanced_Marital_Seperated().isSelected()) {
 				BaseTest.click(s.getAdvanced_Marital_Seperated());
@@ -338,6 +339,7 @@ if (SubCaste.contains(", ")) {
 		}
 /////////////////////////////////////////   *  *  *  *  *   ///////////////////////////////	
 /////////     Have Children  //////
+		Thread.sleep(2000);
 		if (!s.getAdvanced_Marital_Unmarried().isSelected() || s.getAdvanced_Marital_Divorceed().isSelected()
 				|| s.getAdvanced_Marital_Seperated().isSelected() || s.getAdvanced_Marital_Widow().isSelected()
 				|| s.getAdvanced_Marital_Any().isSelected()) {
@@ -417,7 +419,7 @@ if (SubCaste.contains(", ")) {
    */
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////
-				
+		Thread.sleep(2000);
 				String PhysicalStatus =  BaseTest.getExcelData("Advanced Search", 1, 13);
 				if (PhysicalStatus.contains("Doesn't matter")) {
 					if (!s.getAdvanced_Physical_Doesnt().isSelected()) {
@@ -441,8 +443,8 @@ if (SubCaste.contains(", ")) {
 						
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////				
 				
-				String Gothra  =  BaseTest.getExcelData("Advanced Search", 1, 14);
-				BaseTest.typeData(s.getAdvanced_Gothram_Input(), Gothra);
+		/*		String Gothra  =  BaseTest.getExcelData("Advanced Search", 1, 14);
+				BaseTest.typeData(s.getAdvanced_Gothram_Input(), Gothra);  */
 				
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				
@@ -514,7 +516,7 @@ if (SubCaste.contains(", ")) {
 		*/					
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 							
-							///  resident Status   //////////////////
+	/*						///  resident Status   //////////////////
 			
 					String ResidentStaus = BaseTest.getExcelData("Advanced Search", 1, 17);	
 							
@@ -565,7 +567,7 @@ if (SubCaste.contains(", ")) {
 					System.out.println("Resident Status Student visa Was Already was Selected");
 				}
 			}				
-							
+							*/
 ///////////////////////////////////////////////////////////////////
 		/*	
 			String Education = BaseTest.getExcelData("Advanced Search", 1, 10);
@@ -615,7 +617,7 @@ if (SubCaste.contains(", ")) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			      //////////////////////////////////   Annual income  ////////////////////
-			
+	/*		
 			 try {
 			       BaseTest.select_text(s.getAdvanced_AnnualIncome_DD(), BaseTest.getExcelData("Advanced Search", 1, 18));
 			   }    catch (Exception e2) {  System.out.println("Living Status is Not India");
@@ -625,19 +627,19 @@ if (SubCaste.contains(", ")) {
 			    	   BaseTest.select_text(s.getAdvanced_AnnualIncomeTO_DD(), BaseTest.getExcelData("Advanced Search", 1, 19));
 				} catch (Exception e2) {  System.out.println("Annual Income From is ANY or Less than 30K ");
 				}
-			
+			*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			       
 			       /////////////////////////////////   Food Habits   /////////////////////////////////
-
-			       if (BaseTest.getExcelData("Advanced Search",1,20).contains("Any")) {
+						Thread.sleep(2000);
+			/*       if (BaseTest.getExcelData("Advanced Search",1,20).contains("Any")) {
 			    		if(!s.getAdvanced_Eating_Any().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Eating_Any());
 			    		} else {
 			    			System.out.println("Eating Habit - Any is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 21).contains("Vegetarian")) {
 			     		if(!s.getAdvanced_Eating_Vegetarian().isSelected()) {
 			     			BaseTest.click(s.getAdvanced_Eating_Vegetarian());
@@ -645,7 +647,7 @@ if (SubCaste.contains(", ")) {
 			     			System.out.println("Eating Habit -Vegetarian is Already Selected");
 			     		}
 			     		
-			     	} else {} 
+			     	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 21).contains("Non vegetarian")) {
 			    		if(!s.getAdvanced_Eating_NonVegetarian().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Eating_NonVegetarian());
@@ -653,7 +655,7 @@ if (SubCaste.contains(", ")) {
 			    			System.out.println("Eating Habit - Non Vegetarian is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 20).contains("Eggetarian")) {
 			    		if(!s.getAdvanced_Eating_Egg_tarian().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Eating_Egg_tarian());
@@ -661,7 +663,7 @@ if (SubCaste.contains(", ")) {
 			    			System.out.println("Eating Habit - Eggetarian is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 20).contains("Vegan")) {
 			    		if(!s.getAdvanced_Eating_Vegan().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Eating_Vegan());
@@ -670,11 +672,16 @@ if (SubCaste.contains(", ")) {
 			    		}
 			    		
 			    	} else {} 
-			    		
+		*/	    		//
+			       Thread.sleep(2000);
+			       BaseTest.click(s.getAdvanced_Eating_Vegetarian());
+			       
+			       Thread.sleep(2000);
+			       BaseTest.click(s.getAdvanced_Eating_Egg_tarian());
 			    		
 			    		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			    	     ///////////          Smoking Habits      //////////////////////
-			    	
+			       Thread.sleep(2000);
 			    	if (BaseTest.getExcelData("Advanced Search", 1, 21).contains("Any")) {
 			    		if(!s.getAdvanced_Smoking_Any().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Smoking_Any());
@@ -682,7 +689,7 @@ if (SubCaste.contains(", ")) {
 			    			System.out.println("Smoking Habit - Any is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 21).contains("Non-smoker")) {
 			     		if(!s.getAdvanced_Smoking_NonSmoker().isSelected()) {
 			     			BaseTest.click(s.getAdvanced_Smoking_NonSmoker());
@@ -690,7 +697,7 @@ if (SubCaste.contains(", ")) {
 			     			System.out.println("Smoking Habit - Non-Smoker is Already Selected");
 			     		}
 			     		
-			     	} else {} 
+			     	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 21).contains("Light / Social smoker")) {
 			    		if(!s.getAdvanced_Smoking_LightSmoker().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Smoking_LightSmoker());
@@ -698,7 +705,7 @@ if (SubCaste.contains(", ")) {
 			    			System.out.println("Smoking Habit - Light / Social smoker is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("EditPP", 1, 21).contains("Regular smoker")) {
 			    		if(!s.getAdvanced_Smoking_RegularSmoker().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Smoking_RegularSmoker());
@@ -707,7 +714,8 @@ if (SubCaste.contains(", ")) {
 			    		}
 			    		
 			    	} else {} 
-			    		
+			      ////
+			    
 			       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			       ///////////////////////////           Drinking Habits  ///////////////////////////////
 			    	if (BaseTest.getExcelData("Advanced Search", 1, 22).contains("Any")) {
@@ -717,7 +725,7 @@ if (SubCaste.contains(", ")) {
 			    			System.out.println("Drinking Habit - Any is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 22).contains("Non-drinker")) {
 			     		if(!s.getAdvanced_Non_Drinker().isSelected()) {
 			     			BaseTest.click(s.getAdvanced_Non_Drinker());
@@ -725,7 +733,7 @@ if (SubCaste.contains(", ")) {
 			     			System.out.println("Drinking Habit - Non-Drinker is Already Selected");
 			     		}
 			     		
-			     	} else {} 
+			     	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 22).contains("Light / Social drinker")) {
 			    		if(!s.getAdvanced_Light_Drinker().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Light_Drinker());
@@ -733,7 +741,7 @@ if (SubCaste.contains(", ")) {
 			    			System.out.println("Driniking Habit - Light / Social Drinker is Already Selected");
 			    		}
 			    		
-			    	} else {} 
+			    	} else {} Thread.sleep(2000);
 			       if (BaseTest.getExcelData("Advanced Search", 1, 22).contains("Regular drinker")) {
 			    		if(!s.getAdvanced_Regular_Drinker().isSelected()) {
 			    			BaseTest.click(s.getAdvanced_Regular_Drinker());
@@ -742,11 +750,11 @@ if (SubCaste.contains(", ")) {
 			    		}
 			    		
 			    	} else {} 
-
+			       Thread.sleep(2000);
 					/////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-
+		/*	       Thread.sleep(2000);
 					String ShowProfile = BaseTest.getExcelData("Advanced Search", 1, 11);
 
 					if (ShowProfile.contains("Photo")) {
@@ -765,9 +773,9 @@ if (SubCaste.contains(", ")) {
 						}
 					} else {
 					}
-
+*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+					Thread.sleep(2000);
 					String DontShow = BaseTest.getExcelData("Advanced Search", 1, 12);
 					if (DontShow.contains("Contacted")) {
 						if (!s.getAdvanced_DontShow_Contacted().isSelected()) {

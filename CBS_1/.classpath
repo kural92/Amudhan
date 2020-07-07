@@ -25,15 +25,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="/CBS"/>
 	<classpathentry kind="lib" path="/CBSLogin/lib/selenium-server-standalone-3.14.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/amuku/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar" sourcepath="C:/Users/amuku/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="commons-collections"/>
-			<attribute name="maven.artifactId" value="commons-collections"/>
-			<attribute name="maven.version" value="3.2.2"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
