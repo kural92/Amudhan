@@ -399,7 +399,7 @@ try {
  		
  		//////////   
  		Thread.sleep(3000);
- 		Base.click(w.getMy_home());
+ 		Base.click(driver.findElement(By.xpath("//a[contains(text(),'My Home')]")));
  		try {
 			driver.findElement(By.xpath("(//a[@class=\"popupclose\"])[2]")).click();
 		} catch (Exception e) {

@@ -35,7 +35,7 @@ public class Community_Login extends Base{
 	@BeforeSuite
 	public void startUp() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\SMS_Project\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -75,7 +75,7 @@ public void sms(ITestResult result) throws Throwable
 	//String aaaaa = result.getThrowable().getMessage();
 	try {
 	
-	FileInputStream fis = new FileInputStream("C:\\Users\\amuthan\\eclipse-workspace\\SMS_Project\\Excel\\Sms_Test_Data.xlsx");
+	FileInputStream fis = new FileInputStream(".//Excel//Sms_Test_Data.xlsx");
 	
 	Workbook w = new XSSFWorkbook(fis);
 	

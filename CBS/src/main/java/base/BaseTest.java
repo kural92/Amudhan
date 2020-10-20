@@ -44,6 +44,10 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 
 
+
+
+
+
 public class BaseTest {
 	/*public static ExtentReports reports;
     public static ExtentTest test;*/
@@ -55,9 +59,11 @@ public class BaseTest {
     Physical_Status,Body_Type,Complexion,Language__Known,Star,Rasi,SubCaste,
     Gothram,Dosham,Education,Education_Detail,Occupation,Occupation_Detail,
     Employeed_In,Annual_Income,City,State,Country,Citizenship, Religion;
-    
+    //public static Calendar calendar;
     public static ExtentReports extent;
     public static ExtentTest test;
+    
+    public static String Job_Id, Job_Name, Medium, Date;
     
     public static void click(WebElement element) {	
 		element.click();
@@ -73,6 +79,11 @@ public class BaseTest {
 
 	}
 	 ////////////////////////////
+	 
+	 
+    
+     
+	 
 	 
 ////////////////Drop Down Base//////////////////
 		
@@ -547,6 +558,121 @@ public static void sendVFSms5() throws Exception {
     System.out.println(response.toString());
 
 }
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////   Who Viewed Me SmS  /////
+
+public static void sms_who_viewed(String a, int b) throws Exception {
+     String message="PlatForm : Desktop"+"\n"+
+                     "Group : "+b+" - : "+a+"\n"+
+               "Module : Who Viewed My Profile Listing Page " +"\n"+
+    		 "Reason : Might be SOLR down "+"\n"+
+               "Location : Adyar, Chennai "+"\n";
+     
+     String mobileno="917010752043";
+     String[] s = mobileno.split(",");
+     for (int i = 0; i < s.length; i++) {
+
+
+     String url = 
+"http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+     URL obj = new URL(url);
+     HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+     //add reuqest header
+     con.setRequestMethod("POST");
+     //con.setRequestProperty("User-Agent", USER_AGENT);
+     con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+     String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+     // Send post request
+     con.setDoOutput(true);
+     DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+     wr.writeBytes(urlParameters);
+     wr.flush();
+     wr.close();
+
+     int responseCode = con.getResponseCode();
+     System.out.println("\nSending 'POST' request to URL : " + url);
+     System.out.println("Post parameters : " + urlParameters);
+     System.out.println("Response Code : " + responseCode);
+
+     BufferedReader in = new BufferedReader(
+             new InputStreamReader(con.getInputStream()));
+     String inputLine;
+     StringBuffer response = new StringBuffer();
+
+     while ((inputLine = in.readLine()) != null) {
+         response.append(inputLine);
+     }
+     in.close();
+
+     //print result
+     System.out.println(response.toString());
+
+ } 
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// public static String Job_Id, Job_Name, Medium, Date;
+
+public static void sms_bulkJob(String Job_Id, String Job_Name, String Medium, String Date) throws Exception {
+    String message="CBS 24/7 Bulk Job Alert"+"\n"+
+                   // "Job ID : "+Job_Id+"\n"+
+              "Job Name : "+Job_Name+"\n"+
+   		 "Medium : "+Medium+"\n"+
+             
+              "Status : Job stopped abruptly"+"\n"+
+              "Date : "+Date+"\n" ;
+    
+    String mobileno="917010752043";
+    String[] s = mobileno.split(",");
+    for (int i = 0; i < s.length; i++) {
+
+
+    String url = 
+"http://api.myvaluefirst.com/psms/servlet/psms.Eservice2";
+    URL obj = new URL(url);
+    HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+    //add reuqest header
+    con.setRequestMethod("POST");
+    //con.setRequestProperty("User-Agent", USER_AGENT);
+    con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+
+    String urlParameters = "data=<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE MESSAGE SYSTEM \"http://127.0.0.1/psms/dtd/message.dtd\" ><MESSAGE><USER USERNAME=\"matrimony2\" PASSWORD=\"matrimony02\"/><SMS UDH=\"0\" CODING=\"1\" TEXT=\""+message+"\" PROPERTY=\"0\" ID=\"1\"><ADDRESS FROM=\"CMATRI\" TO=\""+s[i]+"\" SEQ=\"1\" TAG=\"some clientside random data\" /></SMS></MESSAGE>&action=send";
+
+    // Send post request
+    con.setDoOutput(true);
+    DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+    wr.writeBytes(urlParameters);
+    wr.flush();
+    wr.close();
+
+    int responseCode = con.getResponseCode();
+    System.out.println("\nSending 'POST' request to URL : " + url);
+    System.out.println("Post parameters : " + urlParameters);
+    System.out.println("Response Code : " + responseCode);
+
+    BufferedReader in = new BufferedReader(
+            new InputStreamReader(con.getInputStream()));
+    String inputLine;
+    StringBuffer response = new StringBuffer();
+
+    while ((inputLine = in.readLine()) != null) {
+        response.append(inputLine);
+    }
+    in.close();
+
+    //print result
+    System.out.println(response.toString());
+
+} 
 }
 
 

@@ -9,6 +9,10 @@ public class TraceRoute {
     public static void main(String args[]){
 
 	    BufferedReader in;
+	    String a = "A Bc Cde";
+        String[] b = a.split(" ");
+        int c = b.length;
+        System.out.println(c);
 
 	        try{
 	            Runtime r   =   Runtime.getRuntime();
@@ -17,6 +21,9 @@ public class TraceRoute {
 	            in  =   new BufferedReader(new InputStreamReader(p.getInputStream()));
 
 	            String line;
+	            
+	            
+	         
 
 	            if(p==null)
 	                System.out.println("could not connect");

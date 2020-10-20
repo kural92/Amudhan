@@ -33,8 +33,8 @@ public class DashBoard_LatestMatches extends BaseTest {
     	  dc.setCapability("reportDirectory", reportDirectory);
           dc.setCapability("reportFormat", reportFormat);
           dc.setCapability("testName", testName);
-          dc.setCapability(MobileCapabilityType.UDID, "32002b32ee5b451f");
-          dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.brahminmatrimony");
+          dc.setCapability(MobileCapabilityType.UDID, "fc95d519");
+          dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.community.matrimony");
           dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.domaininstance.ui.activities.Splash");
           driver = new AndroidDriver<AndroidElement>(new URL("http://localhost:4723/wd/hub"), dc);
           driver.setLogLevel(Level.INFO);

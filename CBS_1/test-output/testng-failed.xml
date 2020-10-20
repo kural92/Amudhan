@@ -3,21 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.unitTestModule.SearchScroll"/>
+      <class name="com.testscripts.WhoViewedMyProfileTest"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="com.unitTestModule.SearchScroll">
+      <class name="com.testscripts.WhoViewedMyProfileTest">
         <methods>
-          <include name="searchTest"/>
-          <include name="regularSearch"/>
+          <include name="startUp"/>
           <include name="htmlReport"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="advancedSearch"/>
+          <include name="whoViewedMeScrollTest"/>
         </methods>
-      </class> <!-- com.unitTestModule.SearchScroll -->
+      </class> <!-- com.testscripts.WhoViewedMyProfileTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

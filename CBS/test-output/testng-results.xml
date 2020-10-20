@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="128343" started-at="2020-07-06T13:47:36Z" finished-at="2020-07-06T13:49:45Z">
+  <suite started-at="2020-10-19T11:53:15Z" name="Default suite" finished-at="2020-10-19T12:00:17Z" duration-ms="422068">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="128343" started-at="2020-07-06T13:47:36Z" finished-at="2020-07-06T13:49:45Z">
-      <class name="com.search.Search">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.search.Search@79ad8b2f]" name="setUp" is-config="true" duration-ms="6194" started-at="2020-07-06T19:17:30Z" finished-at="2020-07-06T19:17:36Z">
+    <test started-at="2020-10-19T11:53:15Z" name="Default test" finished-at="2020-10-19T12:00:17Z" duration-ms="422068">
+      <class name="SprintTask.BulkJobAlert">
+        <test-method is-config="true" signature="startUp()[pri:0, instance:SprintTask.BulkJobAlert@63eef88a]" started-at="2020-10-19T17:23:15Z" name="startUp" finished-at="2020-10-19T17:23:22Z" duration-ms="6255" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="regularSearch()[pri:0, instance:com.search.Search@79ad8b2f]" name="regularSearch" duration-ms="128328" started-at="2020-07-06T19:17:36Z" finished-at="2020-07-06T19:19:45Z">
+        </test-method> <!-- startUp -->
+        <test-method signature="jobAlert()[pri:0, instance:SprintTask.BulkJobAlert@63eef88a]" started-at="2020-10-19T17:23:22Z" name="jobAlert" finished-at="2020-10-19T17:30:17Z" duration-ms="415793" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regularSearch -->
-      </class> <!-- com.search.Search -->
+        </test-method> <!-- jobAlert -->
+      </class> <!-- SprintTask.BulkJobAlert -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
