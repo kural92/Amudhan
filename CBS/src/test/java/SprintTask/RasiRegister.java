@@ -23,7 +23,7 @@ public class RasiRegister extends BaseTest {
 		// test=reports.startTest("Divorcee Negative Payment");
 		// test.log(LogStatus.PASS, "Divorcee Negative Payment Test Started");
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Driver\\chromedriver.exe");
+				".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);

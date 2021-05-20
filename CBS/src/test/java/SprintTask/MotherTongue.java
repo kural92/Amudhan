@@ -22,7 +22,7 @@ public class MotherTongue extends BaseTest {
 		// test=reports.startTest("Divorcee Negative Payment");
 		// test.log(LogStatus.PASS, "Divorcee Negative Payment Test Started");
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Driver\\chromedriver.exe");
+				".//Driver//chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
@@ -46,7 +46,7 @@ public class MotherTongue extends BaseTest {
 	Thread.sleep(3000);
 	driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/form/div[1]/input")).click();
 	
-	driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/form/div[1]/input")).sendKeys("mus10");
+	driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/form/div[1]/input")).sendKeys("DOC180081");
 
 	Thread.sleep(2000);
 	driver.findElement(By.id("passwordClear1")).click();

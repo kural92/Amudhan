@@ -67,6 +67,24 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 	    public static ExtentTest test;
 	    protected static WebDriver driver;
 	    
+	    
+	    
+	    
+	    public void random_in(int a) {
+			
+	    	Random  r =  new Random();
+	    	r.nextInt(a);
+	    	
+	    	
+		}
+	    
+public void random_st(String a) {
+			
+	    	Random  r =  new Random();
+	 
+		}
+	    
+	    
 	    public static void sendVFSms1() throws Exception {
 	         String message="PASS : CBS-Login-Desktop-Adyar,Chennai";
 	         String mobileno="918098882244,916302165648,";

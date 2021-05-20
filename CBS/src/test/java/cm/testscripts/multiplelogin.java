@@ -31,7 +31,7 @@ public class multiplelogin extends BaseTest {
 	public void setUp() {
 		//test=reports.startTest("Divorcee Negative Payment");
 	 // 	test.log(LogStatus.PASS, "Divorcee Negative Payment Test Started");
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\amuthan\\eclipse-workspace\\CBS\\Driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", ".//Driver//chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--disable-notifications");
 			driver = new ChromeDriver(options);
@@ -61,7 +61,7 @@ public class multiplelogin extends BaseTest {
 		//for (int i = 1; i <=5; i++) {
 			
 		
-	    BaseTest.typeData(p1.getMatriID(),p1.readValueFromExcelSheet().get(1).get("UserName"));
+	    BaseTest.typeData(p1.getMatriID(),BaseTest.getExcelData(sheetName, rowNum, colNum));
 		Thread.sleep(3000);
         BaseTest.click(p1.getDpassWordclr1());
 		Thread.sleep(3000);

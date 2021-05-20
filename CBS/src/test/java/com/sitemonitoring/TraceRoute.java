@@ -16,7 +16,7 @@ public class TraceRoute {
 
 	        try{
 	            Runtime r   =   Runtime.getRuntime();
-	            Process p   =   r.exec("tracert cmatri.in");
+	            Process p   =   r.exec("tracert communitymatrimony.com");
 
 	            in  =   new BufferedReader(new InputStreamReader(p.getInputStream()));
 

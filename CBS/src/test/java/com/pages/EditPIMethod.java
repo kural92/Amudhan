@@ -1451,6 +1451,95 @@ try {           //////////////////         Residing State                 //////
 	
 	
 	
+	public static void iimIIT_Education() throws Throwable {
+		
+		GothramPOM g = new GothramPOM(driver);
+		EditPI_POM i = new EditPI_POM(driver);
+		
+		
+		Thread.sleep(3000);
+		BaseTest.click(i.getPI_Education_Edit_btn());
+		
+		int a = BaseTest.getCellCount("IIMIIT");
+		
+		for (int j = 1; j <=a; j++) {
+			
+			Thread.sleep(3000);
+			BaseTest.select_text(i.getPI_HighestEducation_DD(), BaseTest.getExcelData("IIMIIT", 0, j));
+			
+			
+		}
+		
+		try {
+			BaseTest.select_text(i.getPI_AdditionalDegree_DD(), BaseTest.getExcelData("EditPI1", 1, 2));
+		} catch (Exception e) {
+			System.out.println("There is no Additonal Degree Field to Choose the given Value");
+		}
+     
+		
+		BaseTest.clear(i.getPI_College_Value());
+		BaseTest.typeData(i.getPI_College_Value(), BaseTest.getExcelData("EditPI1", 1, 3));
+		
+		BaseTest.clear(i.getPI_Education_Detail_Value());
+		BaseTest.typeData(i.getPI_Education_Detail_Value(), BaseTest.getExcelData("EditPI1", 1, 4));
+		
+		////////////
+		String Employed_In = BaseTest.getExcelData("EditPI1", 1, 5);
+		try {
+		if (Employed_In.contains("Government")) {
+			BaseTest.click(i.getPI_Government());
+		}else if (Employed_In.contains("Defence")) {
+			BaseTest.click(i.getPI_Defence());
+		}else if (Employed_In.contains("Private")) {
+			BaseTest.click(i.getPI_Private());
+		}else if (Employed_In.contains("Business")) {
+			BaseTest.click(i.getPI_Business());
+		}else if (Employed_In.contains("Self Employed")) {
+			BaseTest.click(i.getPI_SelfEmployed());
+		}else if (Employed_In.contains("Not Working")) {
+			BaseTest.click(i.getPI_NotWorking());
+		}else { }
+		} catch (Exception e) {		}
+		//////////////////
+		
+		try {
+			BaseTest.select_text(i.getPI_Occupation_DD(), BaseTest.getExcelData("EditPI1", 1, 6));
+		} catch (Exception e) {
+			System.out.println("There is no Occupation Filed to Choose the given Value");
+		}
+		
+		////////////
+		
+		try {
+			BaseTest.clear(i.getPI_OccupationDetail_DD());
+			BaseTest.typeData(i.getPI_OccupationDetail_DD(), BaseTest.getExcelData("EditPI1", 1, 7));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		BaseTest.select_text(i.getPI_AnnualIncome_Currency(), BaseTest.getExcelData("EditPI1", 1, 8));
+		
+		Thread.sleep(3000);
+		/*try {
+			BaseTest.select_text(i.getPI_AnnualIncome_DD_Value(), BaseTest.getExcelData("EditPI1", 1, 9));
+		} catch (Exception e) {
+			Thread.sleep(3000);
+			BaseTest.clear(i.getPI_AnnualIncome_DD_Value());
+			BaseTest.typeData(i.getPI_AnnualIncome_DD_Value(), BaseTest.getExcelData("EditPI", 1, 10));
+		}*/
+		
+		Thread.sleep(3000);
+		BaseTest.click(i.getPI_Basic_Save());
+		
+
+	
+		
+		
+		
+
+	}
+	
 	
 	
 }

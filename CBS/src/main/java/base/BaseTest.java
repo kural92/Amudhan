@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -34,13 +35,19 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.thoughtworks.selenium.Wait;
 
 
 
@@ -80,8 +87,12 @@ public class BaseTest {
 	}
 	 ////////////////////////////
 	 
+	 public  static void waits(WebElement element) {	
+	
+	 WebDriverWait ww = new WebDriverWait(driver, 30);
+	ww.until(ExpectedConditions.visibilityOf(element));
 	 
-    
+	 }
      
 	 
 	 
@@ -178,7 +189,7 @@ public static int getRowCount(String sheetName) throws Throwable {
  return rowIndex;
 }
 
-public static void setExcelDataInteg(String sheetName, int rowNum, int colNum,int data) throws Throwable{
+public static void setExcelDataInteg(String sheetName, int rowNum, int colNum,String data) throws Throwable{
 	FileInputStream fis = new FileInputStream(".//Excel//SMSTEST.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
  Sheet sh = wb.getSheet(sheetName);
@@ -199,6 +210,52 @@ Sheet sh = wb.getSheet(sheetName);
 Row row = sh.getRow(0);
 int cell = row.getLastCellNum();
 return cell;
+}
+
+
+
+public static void writeexcel(String Result,int RowNum ,int ColNum) throws Throwable
+{
+	FileInputStream fis = new FileInputStream(".//Excel//SMSTEST1.xlsx");
+    //Blank workbook
+    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+    //Create a blank sheet
+    XSSFSheet sheet = workbook.getSheet("Naidu");
+    XSSFSheet ExcelWSheet = sheet;
+    XSSFCell Cell;
+    XSSFRow Row;
+
+    try
+        {
+
+
+            Row  = ExcelWSheet.createRow(RowNum);
+
+            Cell = Row.getCell(ColNum);
+
+            if (Cell == null) {
+
+                Cell = Row.createCell(ColNum);
+
+                Cell.setCellValue(Result);
+
+                } else {
+
+                    Cell.setCellValue(Result);
+
+                }
+
+            FileOutputStream out = new FileOutputStream(new File(".//Excel//SMSTEST1.xlsx"));
+            workbook.write(out);
+            out.close();
+            System.out.println("Naidu Registered Matri_ID written successfully on Sheet.");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -111,14 +111,14 @@ public class BaseTest {
 
 	}
   	
-   /* public void horizontalScroll()
+   public void horizontalScroll()
     {
         Dimension size = driver.manage().window().getSize();
         int x_start=(int)(size.width*0.60);
         int x_end=(int)(size.width*0.30);
         int y=130;
         driver.swipe(x_start,y,x_end,y,4000);
-    }*/
+    }
 	
 
   	@AfterMethod

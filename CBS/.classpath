@@ -24,8 +24,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="/CBSLogin/lib/extentreports-3.0.1.jar"/>
+	<classpathentry kind="lib" path="Driver/sikulixide-2.0.5-win.jar"/>
 	<classpathentry kind="src" path="/Gammoga"/>
-	<classpathentry kind="lib" path="C:/Users/amuku/.p2/pool/plugins/org.testng_7.1.0.r202001120626.jar" sourcepath="C:/Users/amuku/.p2/pool/plugins/org.testng.source_7.1.0.r202001120626.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="/CBS_Payment/lib/selenium-server-standalone-2.52.0.jar"/>
 	<classpathentry kind="lib" path="/CBS_Payment/lib/extentreports-3.0.1.jar"/>

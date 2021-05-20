@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="domain" value="https://www.communitymatrimony.com"/>
+  <test thread-count="5" name="Test">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="domain" value="https://www.communitymatrimony.com"/>
+    <classes>
+      <class name="TestScriptss.LoginPage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Failed suite [Suite] -->

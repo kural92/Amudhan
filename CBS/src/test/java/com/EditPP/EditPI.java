@@ -52,7 +52,7 @@ public class EditPI extends BaseTest{
 		driver.get("https://www.communitymatrimony.com");
 		driver.manage().window().maximize();
 		BaseTest.click(g.getMatriID());
-		BaseTest.typeData(g.getMatriID(), "AGR102088");
+		BaseTest.typeData(g.getMatriID(), "IIM168365");  //AGR102088
 		BaseTest.click(g.getPasswordClear());
 		BaseTest.typeData(g.getPassword(), "cbstest");
 		BaseTest.click(g.getLogin_btn());
@@ -72,6 +72,11 @@ public class EditPI extends BaseTest{
 			// TODO: handle exception
 		}
 		
+		try {
+			BaseTest.click(driver.findElement(By.xpath("//a[contains(text(),'Skip')]")));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		Thread.sleep(5000);
 		try {
 			Alert al = driver.switchTo().alert();
@@ -102,17 +107,17 @@ public class EditPI extends BaseTest{
 		String parent = driver.getWindowHandle();
 		
 		/////////////////////////////////////////////////////////////////
-//		EditPIMethod.basicDetail();
+		EditPIMethod.iimIIT_Education();
 	//	EditPIMethod.educationDetail();
 	//	EditPIMethod.familyDetails();
   //	EditPIMethod.hobby();
   // 	EditPIMethod.music();
     //    EditPIMethod.sports();
 	 //   EditPIMethod.hobbies();
-	    EditPIMethod.editPartnerPrefernce();
-	    EditPIMethod.locationDetail();
-	    EditPIMethod.email_mobileno_PI_edit();
-	    logOut.logoutMethod();
+	//    EditPIMethod.editPartnerPrefernce();
+	 //   EditPIMethod.locationDetail();
+	 //   EditPIMethod.email_mobileno_PI_edit();
+	 //   logOut.logoutMethod();
 	    ///////////////////////////////////////////////////////////////////////
 	    
 
